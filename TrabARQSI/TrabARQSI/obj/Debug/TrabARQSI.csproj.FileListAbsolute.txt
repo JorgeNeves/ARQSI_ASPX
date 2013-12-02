@@ -1,0 +1,5 @@
+c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\bin\TrabARQSI.dll
+c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\bin\TrabARQSI.pdb
+c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.csprojResolveAssemblyReference.cache
+c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.dll
+c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.pdb
