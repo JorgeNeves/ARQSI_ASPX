@@ -12,18 +12,26 @@ namespace Table_Model.DAL
 
         }
 
-        public bool registarUser(string user, string pw)
+        public int registarUser(string user, string pw)
         {
-            OleDbConnection connection = GetConnection(true);
-            OleDbCommand con = new OleDbCommand("select MAX(IdUser) from User");
+           //OleDbConnection connection = GetConnection(true);
+            /*OleDbCommand con = new OleDbCommand("select MAX(IdUser) from User");
             int id = (int)con.ExecuteScalar();
+            */
+            //OleDbConnection conn = GetConnection(true);/*
+          /* OleDbCommand sqlcmd = new OleDbCommand("INSERT INTO User (IdUser,username,password,tipo) VALUES ("+1+","+user+","+pw+",user)", CurrentTransaction.Connection, CurrentTransaction);
+           ExecuteNonQuery(CurrentTransaction, sqlcmd);*/
+            //return true;
 
-            OleDbCommand cnx = new OleDbCommand("INSERT INTO User (idUser,username,password,tipo) VALUES (?,?,?,user)");
-            cnx.Parameters.AddWithValue("@id", id);
-            cnx.Parameters.AddWithValue("@user", user);
-            cnx.Parameters.AddWithValue("pw", pw);
-            cnx.ExecuteNonQuery();
-            return true;
+
+            OleDbConnection cnx = GetConnection(true);
+            OleDbCommand sqlcmd =
+                new OleDbCommand("INSERT INTO User (IdUser,username,password) VALUES(?,?,?)",
+                    CurrentTransaction.Connection, CurrentTransaction);
+            sqlcmd.Parameters.Add(1);
+            sqlcmd.Parameters.Add(user);
+            sqlcmd.Parameters.Add(pw);
+            return ExecuteNonQuery(CurrentTransaction, sqlcmd);
         }
     }
 

@@ -57,10 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\bdtrab.mdf" />
-    <Content Include="App_Data\bdtrab_log.ldf">
-      <DependentUpon>bdtrab.mdf</DependentUpon>
-    </Content>
     <Content Include="login.aspx">
       <BrowseToURL>~/login.aspx</BrowseToURL>
     </Content>
@@ -97,6 +93,9 @@
       <Project>{baae0a25-b554-4df6-8555-0432d4440514}</Project>
       <Name>Table_Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

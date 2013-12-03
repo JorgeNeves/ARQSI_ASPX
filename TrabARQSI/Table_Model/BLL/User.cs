@@ -14,7 +14,7 @@ namespace Table_Model.BLL
             return true;
         }
 
-        public bool registarUser(string user, string pw)
+        public int registarUser(string user, string pw)
         {
             DAL.UserGateway dal = new DAL.UserGateway();
             return dal.registarUser(user, pw);

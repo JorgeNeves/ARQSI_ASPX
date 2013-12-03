@@ -4,27 +4,21 @@ using System.Data.OleDb;
 
 namespace Table_Model.DAL
 {
-	/// <summary>
-	/// Summary description for BaseGateway.
-	/// </summary>
 	public abstract class BaseGateway
 	{
 		public BaseGateway()
 		{
-			//
-			// TODO: Add constructor logic here
-			//
 		}
         //alteradas as connectionStrings
-       // private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|BDTRAB.MDF;";
-        private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\App_Data\bdtrab.mdf;";
+
+        private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress;Initial Catalog=ARQSI056;UserID=ARQSI056;Password=ARQSI056";
         
 		private string CONNSTR
 		{
 			get 
 			{
 				//return System.Configuration.ConfigurationSettings.AppSettings["ConnStr"];
-                return _CONNSTR;
+               return _CONNSTR;
             }
 		}
 
