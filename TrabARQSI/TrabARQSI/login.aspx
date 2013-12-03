@@ -12,9 +12,15 @@
         .auto-style2 {
             width: 157px;
         }
+        .auto-style4 {
+            width: 130px;
+        }
+        .auto-style5 {
+            width: 116px;
+        }
     </style>
 </head>
-<body>
+<body style="height: 105px">
     <form id="form1" runat="server">
     <div>
     
@@ -41,6 +47,20 @@
                 </td>
             </tr>
         </table>
+    
+        <div>
+            <div>
+                <table style="width: 100%; height: 32px;">
+                    <tr>
+                        <td class="auto-style5">&nbsp;</td>
+                        <td class="auto-style4">
+                            <asp:Button ID="btnsignin" runat="server" Height="24px" Text="Sign In" Width="116px" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     
     </div>
     </form>
