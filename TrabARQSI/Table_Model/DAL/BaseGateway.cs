@@ -11,7 +11,11 @@ namespace Table_Model.DAL
 		}
         //alteradas as connectionStrings
 
-        private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress;Initial Catalog=ARQSI056;UserID=ARQSI056;Password=ARQSI056";
+        //private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress; Initial Catalog=ARQSI056;UserID=ARQSI056;Password=ARQSI056";
+        private const string _CONNSTR = @"Provider=SQLOLEDB;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress; 
+                                           Initial Catalog=ARQSI056.dbo; 
+                                           UserID=ARQSI056; 
+                                            Password=ARQSI056";
         
 		private string CONNSTR
 		{
