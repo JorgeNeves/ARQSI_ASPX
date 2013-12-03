@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace TM_TDG.WithDataSets.DAL
+namespace Table_Model.DAL
 {
 	/// <summary>
 	/// Summary description for BaseGateway.
@@ -16,7 +16,9 @@ namespace TM_TDG.WithDataSets.DAL
 			//
 		}
         //alteradas as connectionStrings
-		private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|revenuerecognitions.mdb;";
+       // private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|BDTRAB.MDF;";
+        private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\App_Data\bdtrab.mdf;";
+        
 		private string CONNSTR
 		{
 			get 

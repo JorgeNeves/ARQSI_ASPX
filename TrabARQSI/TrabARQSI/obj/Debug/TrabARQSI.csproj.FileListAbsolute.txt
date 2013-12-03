@@ -3,3 +3,10 @@ c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\bin\Tra
 c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.csprojResolveAssemblyReference.cache
 c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.dll
 c:\users\jorge\documents\visual studio 2012\Projects\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\bin\TrabARQSI.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\bin\TrabARQSI.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\bin\Table_Model.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\bin\Table_Model.pdb

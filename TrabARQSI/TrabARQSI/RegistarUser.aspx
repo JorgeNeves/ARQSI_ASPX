@@ -53,14 +53,14 @@
             <tr>
                 <td class="auto-style1">Password:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtpw" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">Confirmar Password:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtpw2" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td class="auto-style3"></td>
             </tr>
@@ -70,7 +70,7 @@
                 <tr>
                     <td class="auto-style8">&nbsp;</td>
                     <td class="auto-style7">
-                        <asp:Button ID="btnregistar" runat="server" Text="Registar" Width="98px" />
+                        <asp:Button ID="btnregistar" runat="server" Text="Registar" Width="98px" OnClick="btnregistar_Click" />
                     </td>
                     <td class="auto-style6">
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Width="98px" />

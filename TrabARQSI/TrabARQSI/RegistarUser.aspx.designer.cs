@@ -40,22 +40,22 @@ namespace TrabARQSI {
         protected global::System.Web.UI.WebControls.Label lblverificausername;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtpw control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtpw;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtpw2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtpw2;
         
         /// <summary>
         /// btnregistar control.

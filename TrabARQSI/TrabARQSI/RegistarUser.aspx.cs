@@ -13,5 +13,16 @@ namespace TrabARQSI
         {
 
         }
+
+        protected void btnregistar_Click(object sender, EventArgs e)
+        {
+            if (txtpw.Text == txtpw2.Text)
+            {
+                
+                Table_Model.BLL.User us = new Table_Model.BLL.User();
+                us.registarUser(TextBox1.Text, txtpw.Text);
+                
+            }
+        }
     }
 }
