@@ -11,7 +11,7 @@ namespace TrabARQSI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblverificausername.Text = "";
         }
 
         protected void btnregistar_Click(object sender, EventArgs e)
@@ -20,7 +20,14 @@ namespace TrabARQSI
             {
                 
                 Table_Model.BLL.User us = new Table_Model.BLL.User();
-                us.registarUser(TextBox1.Text, txtpw.Text);
+                if (us.registarUser(TextBox1.Text, txtpw.Text))
+                {
+                    lblverificausername.Text = "Registo com sucesso!";
+                }
+                else
+                {
+                    lblverificausername.Text = "Utilizador já existe!";
+                }
                 
             }
         }

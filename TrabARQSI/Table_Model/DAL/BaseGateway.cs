@@ -12,10 +12,7 @@ namespace Table_Model.DAL
         //alteradas as connectionStrings
 
         //private const string _CONNSTR = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress; Initial Catalog=ARQSI056;UserID=ARQSI056;Password=ARQSI056";
-        private const string _CONNSTR = @"Provider=SQLOLEDB;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress; 
-                                           Initial Catalog=ARQSI056.dbo; 
-                                           UserID=ARQSI056; 
-                                            Password=ARQSI056";
+        private const string _CONNSTR = @"Provider=SQLOLEDB;Data Source=gandalf.dei.isep.ipp.pt\sqlexpress;Initial Catalog=ARQSI056;Persist Security Info=True;User ID=ARQSI056;Password=ARQSI056";
         
 		private string CONNSTR
 		{
@@ -26,12 +23,7 @@ namespace Table_Model.DAL
             }
 		}
 
-		private OleDbTransaction myTx;
-
-		protected OleDbTransaction CurrentTransaction
-		{
-			get { return myTx; }
-		}
+        
 
 		protected OleDbConnection GetConnection(bool open)
 		{
@@ -41,83 +33,16 @@ namespace Table_Model.DAL
 			return cnx;
 		}
 
-		protected DataSet ExecuteQuery(OleDbConnection cnx, string sql)
-		{
-			try
-			{
-				OleDbDataAdapter da = new OleDbDataAdapter(sql, cnx);
-				DataSet ds = new DataSet();
-				da.Fill(ds);
-				return ds;
-			}
-			catch (OleDbException ex)
-			{
-				throw new ApplicationException("Erro BD", ex);
-			}
-		}
+        protected DataSet GetDataSet(string Sql)
+        {
+            OleDbConnection conn = new OleDbConnection(_CONNSTR);
+            OleDbDataAdapter adp = new OleDbDataAdapter(Sql, conn);
+            DataSet ds = new DataSet();
+            adp.Fill(ds);
+            conn.Close();
+            return ds;
+        }
 
-		protected void FillDataSet(OleDbConnection cnx, string sql, DataSet ds, string tableName)
-		{
-			try
-			{
-				OleDbDataAdapter da = new OleDbDataAdapter(sql, cnx);
-				da.Fill(ds, tableName);
-			}
-			catch (OleDbException ex)
-			{
-				throw new ApplicationException("Erro BD", ex);
-			}
-		}
 
-		protected int ExecuteNonQuery(OleDbConnection cnx, string sql)
-		{
-			OleDbCommand cmd = new OleDbCommand(sql, cnx);
-			return cmd.ExecuteNonQuery();
-		}
-
-		protected int ExecuteNonQuery(OleDbTransaction tx, string sql)
-		{
-			OleDbCommand cmd = new OleDbCommand(sql, tx.Connection, tx);
-			return cmd.ExecuteNonQuery();
-		}
-
-		protected int ExecuteNonQuery(OleDbTransaction tx, OleDbCommand cmd)
-		{
-			cmd.Transaction = tx;
-			return cmd.ExecuteNonQuery();
-		}
-
-		public void BeginTransaction()
-		{
-			try
-			{
-				if (myTx == null)
-					myTx = GetConnection(true).BeginTransaction();
-			}
-			catch (OleDbException ex)
-			{
-				throw new ApplicationException("Erro BD", ex);
-			}
-		}
-
-		public void CommitTransaction()
-		{
-			if (myTx != null)
-			{
-				OleDbConnection cnx = myTx.Connection;
-				myTx.Commit();
-				cnx.Close();
-			}
-		}
-
-		public void RoolbackTransaction()
-		{
-			if (myTx != null)
-			{
-				OleDbConnection cnx = myTx.Connection;
-				myTx.Rollback();
-				cnx.Close();
-			}
-		}
 	}
 }

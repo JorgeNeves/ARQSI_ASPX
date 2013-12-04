@@ -1,8 +1,8 @@
-C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.Properties.Resources.resources
-C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.csproj.GenerateResource.Cache
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\bin\Debug\Table_Model.dll.config
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\bin\Debug\Table_Model.dll
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\bin\Debug\Table_Model.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.Properties.Resources.resources
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.csproj.GenerateResource.Cache
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.dll
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.pdb
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.csprojResolveAssemblyReference.cache
