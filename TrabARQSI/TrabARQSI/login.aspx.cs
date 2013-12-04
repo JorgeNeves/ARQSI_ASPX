@@ -35,7 +35,10 @@ namespace TrabARQSI.App_Code
             {
                 Response.Redirect("HomeGestor.aspx", true);
             }
-
+            if (Session["tipo"].ToString() == "user")
+            {
+                Response.Redirect("HomeCliente.aspx", true);
+            }
         }
 
         protected void btnsignin_Click(object sender, EventArgs e)
