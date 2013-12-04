@@ -54,9 +54,11 @@
                     <tr>
                         <td class="auto-style5">&nbsp;</td>
                         <td class="auto-style4">
-                            <asp:Button ID="btnsignin" runat="server" Height="24px" Text="Sign In" Width="116px" />
+                            <asp:Button ID="btnsignin" runat="server" Height="24px" Text="Sign In" Width="116px" OnClick="btnsignin_Click" />
                         </td>
-                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </td>
                     </tr>
                 </table>
             </div>

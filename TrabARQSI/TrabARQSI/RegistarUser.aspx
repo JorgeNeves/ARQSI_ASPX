@@ -17,11 +17,11 @@
             height: 42px;
         }
         .auto-style4 {
-            width: 144px;
+            width: 197px;
         }
         .auto-style5 {
             height: 42px;
-            width: 144px;
+            width: 197px;
         }
         .auto-style6 {
             height: 23px;
@@ -42,25 +42,39 @@
     
         <table style="width:100%;">
             <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style4">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style1">Username:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="168px"></asp:TextBox>
                 </td>
                 <td>
                     <asp:Label ID="lblverificausername" runat="server" Text="Username Válido!"></asp:Label>
                 </td>
             </tr>
             <tr>
+                <td class="auto-style1">Email</td>
+                <td class="auto-style4">
+                    <asp:TextBox ID="TextBox2" runat="server" Width="168px"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style1">Password:</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtpw" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtpw" runat="server" TextMode="Password" Width="171px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">Confirmar Password:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="txtpw2" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtpw2" runat="server" TextMode="Password" Width="168px"></asp:TextBox>
                 </td>
                 <td class="auto-style3"></td>
             </tr>
@@ -73,7 +87,7 @@
                         <asp:Button ID="btnregistar" runat="server" Text="Registar" Width="98px" OnClick="btnregistar_Click" />
                     </td>
                     <td class="auto-style6">
-                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Width="98px" />
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Width="98px" OnClick="btnCancelar_Click" />
                     </td>
                 </tr>
             </table>

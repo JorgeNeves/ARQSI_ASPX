@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HomeGestor.aspx" />
     <Content Include="login.aspx">
       <BrowseToURL>~/login.aspx</BrowseToURL>
     </Content>
@@ -64,6 +65,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeGestor.aspx.cs">
+      <DependentUpon>HomeGestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeGestor.aspx.designer.cs">
+      <DependentUpon>HomeGestor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

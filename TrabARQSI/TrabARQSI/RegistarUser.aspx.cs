@@ -20,7 +20,7 @@ namespace TrabARQSI
             {
                 
                 Table_Model.BLL.User us = new Table_Model.BLL.User();
-                if (us.registarUser(TextBox1.Text, txtpw.Text))
+                if (us.registarUser(TextBox1.Text, txtpw.Text,TextBox2.Text))
                 {
                     lblverificausername.Text = "Registo com sucesso!";
                 }
@@ -30,6 +30,11 @@ namespace TrabARQSI
                 }
                 
             }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx", true);
         }
     }
 }
