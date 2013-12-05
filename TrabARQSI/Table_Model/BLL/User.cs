@@ -26,5 +26,10 @@ namespace Table_Model.BLL
             DAL.UserGateway dal = new DAL.UserGateway();
             return dal.getTipoUser(user);
         }
+        public int getidUser(string user)
+        {
+            DAL.UserGateway dal = new DAL.UserGateway();
+            return dal.getiduser(user);
+        }
     }
 }

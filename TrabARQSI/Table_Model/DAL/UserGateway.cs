@@ -55,6 +55,13 @@ namespace Table_Model.DAL
             return (string)s.Tables[0].Rows[0]["tipo"];
 
         }
+
+        public int getiduser(string user)
+        {
+            string sqlid = "select idUser from Utilizadores where username='" + user + "'";
+            DataSet s = GetDataSet(sqlid);
+            return (int)s.Tables[0].Rows[0]["idUser"];
+        }
     }
 
 

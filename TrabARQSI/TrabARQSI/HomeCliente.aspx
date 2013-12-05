@@ -74,7 +74,7 @@
                         <tr>
                             <td class="auto-style17">&nbsp;</td>
                             <td>
-                                <asp:Button ID="btncarrinho" runat="server" style="margin-left: 24px" Text="Carrinho" Width="84px" />
+                                <asp:Button ID="btncarrinho" runat="server" style="margin-left: 24px" Text="Carrinho" Width="84px" OnClick="btncarrinho_Click" />
                             </td>
                             <td>&nbsp;</td>
                         </tr>
