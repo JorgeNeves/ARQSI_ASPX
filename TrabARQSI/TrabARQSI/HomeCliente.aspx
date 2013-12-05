@@ -58,17 +58,16 @@
             </tr>
             <tr>
                 <td class="auto-style8">
-                    <asp:SqlDataSource ID="Produtos" runat="server" ConnectionString="<%$ ConnectionStrings:ARQSI056ConnectionString %>" SelectCommand="SELECT [Preço], [Quantidade], [Nome], [Genero], [Ediçao], [ISBN] FROM [Produto]"></asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="Produtos" Width="267px">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="Produtos">
                         <Columns>
                             <asp:BoundField DataField="Preço" HeaderText="Preço" SortExpression="Preço" />
                             <asp:BoundField DataField="Quantidade" HeaderText="Quantidade" SortExpression="Quantidade" />
                             <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                             <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero" />
                             <asp:BoundField DataField="Ediçao" HeaderText="Ediçao" SortExpression="Ediçao" />
-                            <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
                         </Columns>
                     </asp:GridView>
+                    <asp:SqlDataSource ID="Produtos" runat="server" ConnectionString="<%$ ConnectionStrings:ARQSI056ConnectionString %>" SelectCommand="SELECT [Preço], [Quantidade], [Nome], [Genero], [Ediçao] FROM [Produto]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style9" colspan="2">
                     <table style="width: 100%; height: 112px;">
@@ -89,7 +88,7 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                                <asp:Button ID="btnlogout" runat="server" style="margin-left: 18px" Text="Logout" Width="89px" />
+                                <asp:Button ID="btnlogout" runat="server" style="margin-left: 18px" Text="Logout" Width="89px" OnClick="btnlogout_Click" />
                             </td>
                             <td>&nbsp;</td>
                         </tr>
