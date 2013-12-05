@@ -18,7 +18,7 @@ namespace TrabARQSI.App_Code
         {
             Table_Model.BLL.User us = new Table_Model.BLL.User();
             string user = txtUser.Text;
-            string pw = txtUser.Text;
+            string pw = TextBox1.Text;
             if (us.isValidUser(user,pw))
             {
                 Label1.Text = "Utilizador logado";

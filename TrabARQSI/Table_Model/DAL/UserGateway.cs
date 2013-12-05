@@ -35,10 +35,9 @@ namespace Table_Model.DAL
 
         public bool validUser(string user, string pw)
         {
-           string sqlCount = "select * from Utilizadores where username ='" + user +"' and password= '" + pw + "'";
-           DataSet s = GetDataSet(sqlCount);
-
-           if (s.Tables[0].Rows.Count == 0)
+           string sql = "select * from Utilizadores where username ='" + user +"'";
+           DataSet s = GetDataSet(sql);
+           if (s.Tables[0].Rows[0]["password"].ToString() == pw)
            {
                return true;
            }

@@ -33,16 +33,8 @@ namespace TrabARQSI
             string edicao = txEdicao.Text;
             Table_Model.BLL.Produto p = new Table_Model.BLL.Produto();
             p.inserirProduto(nome, precof, quantidade, genero, edicao);
-
-            DataTable dt = p.GetProdutos();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-
-            txNome.Text="";
-            txPreco.Text="";
-            txQuantidade.Text="";
-            txGenero.Text="";
-            txEdicao.Text="";
+            atualizar();
+            
 
         }
 
@@ -69,12 +61,32 @@ namespace TrabARQSI
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+            Table_Model.BLL.Produto produtBll = new Table_Model.BLL.Produto();
+            int id = (int)GridView1.SelectedDataKey.Value;
+            produtBll.alterarProduto(id, txNome.Text, txPreco.Text, int.Parse(txQuantidade.Text), txGenero.Text, txEdicao.Text);
+            atualizar();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             int id = (int)GridView1.SelectedDataKey.Value;
             Table_Model.BLL.Produto p = new Table_Model.BLL.Produto();
+            p.removerProduto(id);
+            atualizar();
+        }
+
+        private void atualizar()
+        {
+            Table_Model.BLL.Produto p = new Table_Model.BLL.Produto();
+            DataTable dt = p.GetProdutos();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
+            txNome.Text = "";
+            txPreco.Text = "";
+            txQuantidade.Text = "";
+            txGenero.Text = "";
+            txEdicao.Text = "";
         }
     }
 }

@@ -85,7 +85,17 @@
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style2" colspan="3">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateSelectButton="True" DataKeyNames="IdProduto" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateSelectButton="True" DataKeyNames="IdProduto" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Width="329px">
+                        <AlternatingRowStyle BackColor="White" />
+                        <FooterStyle BackColor="#CCCC99" />
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle BackColor="#F7F7DE" />
+                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                        <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
                 </td>
                 <td class="auto-style2">&nbsp;</td>
@@ -130,7 +140,7 @@
                     <asp:TextBox ID="txGenero" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style10">
-                    <asp:Button ID="Button2" runat="server" Text="Remover" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Remover" />
                 </td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>

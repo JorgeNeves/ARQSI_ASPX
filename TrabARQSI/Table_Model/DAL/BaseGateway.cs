@@ -58,6 +58,12 @@ namespace Table_Model.DAL
             }
         }
 
+        protected int ExecuteNonQuery(OleDbConnection cnx, string sql)
+        {
+            OleDbCommand cmd = new OleDbCommand(sql, cnx);
+            return cmd.ExecuteNonQuery();
+        }
+
         protected void FillDataSet(OleDbConnection cnx, string sql, DataSet ds, string tableName)
         {
             try

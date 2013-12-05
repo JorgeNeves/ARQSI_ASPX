@@ -23,6 +23,20 @@ namespace Table_Model.DAL
             DataSet ds = ExecuteQuery(cnx, "SELECT * FROM Produto");
             return ds.Tables[0];
         }
+
+        public int removerProduto(int id)
+        {
+           string sql = " DELETE FROM Produto WHERE IdProduto="+id;
+           OleDbConnection cnx = GetConnection(true);
+           return ExecuteNonQuery(cnx, sql);
+        }
+
+        public int alterarProduto(int id, string nome, string preco, int quantidade, string genero, string edicao)
+        {
+            string sql = "UPDATE Produto SET Nome='"+nome+"',Preço='"+preco+"',Quantidade='"+quantidade+"',Genero='"+genero+"',Ediçao='"+edicao+"' WHERE IdProduto="+id;
+            OleDbConnection cnx = GetConnection(true);
+            return ExecuteNonQuery(cnx,sql);
+        }
     }
 
     
