@@ -19,6 +19,13 @@ namespace TrabARQSI
             }
         }
 
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            Session["user"] = null;
+            Session["tipo"] = null;
+            Response.Redirect("login.aspx", true);
+        }
+
         
 
        
