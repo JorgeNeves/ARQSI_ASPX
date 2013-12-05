@@ -43,6 +43,33 @@ namespace Table_Model.DAL
             return ds;
         }
 
+        protected DataSet ExecuteQuery(OleDbConnection cnx, string sql)
+        {
+            try
+            {
+                OleDbDataAdapter da = new OleDbDataAdapter(sql, cnx);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro BD", ex);
+            }
+        }
+
+        protected void FillDataSet(OleDbConnection cnx, string sql, DataSet ds, string tableName)
+        {
+            try
+            {
+                OleDbDataAdapter da = new OleDbDataAdapter(sql, cnx);
+                da.Fill(ds, tableName);
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro BD", ex);
+            }
+        }
 
 	}
 }

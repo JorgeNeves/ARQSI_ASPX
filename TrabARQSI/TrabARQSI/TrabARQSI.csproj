@@ -39,6 +39,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,6 +66,14 @@
     </Content>
     <Content Include="MenuCarrinho.aspx" />
     <Content Include="RegistarUser.aspx" />
+    <Content Include="Service References\LogisticaSA\ServiceLogisticaSA.disco" />
+    <Content Include="Service References\LogisticaSA\configuration91.svcinfo" />
+    <Content Include="Service References\LogisticaSA\configuration.svcinfo" />
+    <Content Include="Service References\LogisticaSA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Teste.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,8 +113,27 @@
     <Compile Include="RegistarUser.aspx.designer.cs">
       <DependentUpon>RegistarUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\LogisticaSA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.aspx.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teste.aspx.designer.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Service References\LogisticaSA\ServiceLogisticaSA.wsdl" />
+    <None Include="Service References\LogisticaSA\ServiceLogisticaSA.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSA\ServiceLogisticaSA1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LogisticaSA\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
