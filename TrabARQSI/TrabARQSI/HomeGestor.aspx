@@ -7,30 +7,63 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
+            width: 105px;
         }
         .auto-style2 {
             text-align: center;
         }
         .auto-style3 {
-            width: 227px;
+            width: 105px;
             text-align: center;
             height: 58px;
         }
         .auto-style4 {
-            width: 107px;
+            width: 152px;
             text-align: center;
         }
         .auto-style5 {
-            width: 107px;
+            width: 152px;
         }
         .auto-style6 {
-            width: 107px;
+            width: 152px;
             text-align: center;
             height: 58px;
         }
         .auto-style7 {
             text-align: center;
             height: 58px;
+        }
+        .auto-style8 {
+            width: 152px;
+            height: 30px;
+        }
+        .auto-style9 {
+            width: 105px;
+            height: 30px;
+        }
+        .auto-style10 {
+            height: 30px;
+        }
+        .auto-style11 {
+            height: 28px;
+            width: 97px;
+            text-align: left;
+        }
+        .auto-style12 {
+            width: 152px;
+            height: 28px;
+        }
+        .auto-style13 {
+            width: 105px;
+            height: 28px;
+        }
+        .auto-style14 {
+            height: 28px;
+        }
+        .auto-style15 {
+            width: 97px;
+            height: 30px;
+            text-align: left;
         }
     </style>
 </head>
@@ -42,7 +75,7 @@
             <tr>
                 <td class="auto-style6">
                     &nbsp;</td>
-                <td class="auto-style3">
+                <td class="auto-style3" colspan="2">
                     &nbsp;</td>
                 <td class="auto-style7">
                     &nbsp;</td>
@@ -51,8 +84,8 @@
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style2" colspan="2">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdProduto" DataSourceID="dbLoja" style="margin-left: 0px">
+                <td class="auto-style2" colspan="3">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdProduto" DataSourceID="dbLoja" style="margin-left: 0px" Width="446px">
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                             <asp:BoundField DataField="IdProduto" HeaderText="IdProduto" InsertVisible="False" ReadOnly="True" SortExpression="IdProduto" />
@@ -97,9 +130,60 @@
                 <td class="auto-style2">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style5">Utilizador logado:<asp:Label ID="lbuser" runat="server"></asp:Label>
+                <td class="auto-style12">
                 </td>
-                <td class="auto-style1">&nbsp;</td>
+                <td class="auto-style11">Nome Produto</td>
+                <td class="auto-style13">
+                    <asp:TextBox ID="txNome" runat="server" Width="169px"></asp:TextBox>
+                </td>
+                <td class="auto-style14"></td>
+                <td class="auto-style14"></td>
+            </tr>
+            <tr>
+                <td class="auto-style8">
+                </td>
+                <td class="auto-style15">Preço</td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="txPreco" runat="server" Width="75px"></asp:TextBox>
+                </td>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style15">Quantidade</td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="txQuantidade" runat="server" Width="77px"></asp:TextBox>
+                </td>
+                <td class="auto-style10">&nbsp;</td>
+                <td class="auto-style10">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style15">Genero</td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="txGenero" runat="server"></asp:TextBox>
+                </td>
+                <td class="auto-style10">&nbsp;</td>
+                <td class="auto-style10">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style15">Edicao</td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="txEdicao" runat="server" Width="79px"></asp:TextBox>
+                </td>
+                <td class="auto-style10">
+                    <asp:Button ID="btInserir" runat="server" OnClick="btInserir_Click" Text="Inserir" />
+                </td>
+                <td class="auto-style10">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">Utilizador logado:<asp:Label ID="lbuser" runat="server"></asp:Label>
+                    <br />
+&nbsp;<asp:Button ID="btlogout" runat="server" OnClick="btlogout_Click" Text="Logout" />
+                </td>
+                <td class="auto-style1" colspan="2">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
