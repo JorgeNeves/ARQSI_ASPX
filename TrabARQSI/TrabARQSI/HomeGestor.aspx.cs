@@ -16,5 +16,16 @@ namespace TrabARQSI
                 Response.Redirect("login.aspx", true);
             }
         }
+
+        protected void btInserir_Click(object sender, EventArgs e)
+        {
+            string nome = txNome.Text;
+            string preco = txPreco.Text;
+            string quantidade = txQuantidade.Text;
+            string genero = txGenero.Text;
+            string edicao = txEdicao.Text;
+
+
+        }
     }
 }
