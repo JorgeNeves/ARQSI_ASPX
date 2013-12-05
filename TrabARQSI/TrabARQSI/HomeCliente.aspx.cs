@@ -26,6 +26,11 @@ namespace TrabARQSI
             Response.Redirect("login.aspx", true);
         }
 
+        protected void btncarrinho_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuCarrinho.aspx", true);
+        }
+
         
 
        
