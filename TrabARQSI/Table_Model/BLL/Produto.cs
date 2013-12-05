@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+
 
 namespace Table_Model.BLL
 {
@@ -14,6 +12,12 @@ namespace Table_Model.BLL
         {
             DAL.ProdutoGateway p = new DAL.ProdutoGateway();
             return p.insereProduto(nome, preco, quantidade, genero, edicao);
+        }
+
+        public DataTable GetProdutos()
+        {
+            DAL.ProdutoGateway p = new DAL.ProdutoGateway();
+            return p.GetProdutos();
         }
     }
 

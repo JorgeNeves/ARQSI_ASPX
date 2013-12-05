@@ -85,47 +85,8 @@
             <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style2" colspan="3">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IdProduto" DataSourceID="dbLoja" style="margin-left: 0px" Width="446px">
-                        <Columns>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                            <asp:BoundField DataField="IdProduto" HeaderText="IdProduto" InsertVisible="False" ReadOnly="True" SortExpression="IdProduto" />
-                            <asp:BoundField DataField="Preço" HeaderText="Preço" SortExpression="Preço" />
-                            <asp:BoundField DataField="Quantidade" HeaderText="Quantidade" SortExpression="Quantidade" />
-                            <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
-                            <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero" />
-                            <asp:BoundField DataField="Ediçao" HeaderText="Ediçao" SortExpression="Ediçao" />
-                        </Columns>
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateSelectButton="True" DataKeyNames="IdProduto" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     </asp:GridView>
-                    <asp:SqlDataSource ID="dbLoja" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ARQSI056ConnectionString %>" DeleteCommand="DELETE FROM [Produto] WHERE [IdProduto] = @original_IdProduto AND (([Preço] = @original_Preço) OR ([Preço] IS NULL AND @original_Preço IS NULL)) AND (([Quantidade] = @original_Quantidade) OR ([Quantidade] IS NULL AND @original_Quantidade IS NULL)) AND (([Nome] = @original_Nome) OR ([Nome] IS NULL AND @original_Nome IS NULL)) AND (([Genero] = @original_Genero) OR ([Genero] IS NULL AND @original_Genero IS NULL)) AND (([Ediçao] = @original_Ediçao) OR ([Ediçao] IS NULL AND @original_Ediçao IS NULL))" InsertCommand="INSERT INTO [Produto] ([Preço], [Quantidade], [Nome], [Genero], [Ediçao]) VALUES (@Preço, @Quantidade, @Nome, @Genero, @Ediçao)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Produto]" UpdateCommand="UPDATE [Produto] SET [Preço] = @Preço, [Quantidade] = @Quantidade, [Nome] = @Nome, [Genero] = @Genero, [Ediçao] = @Ediçao WHERE [IdProduto] = @original_IdProduto AND (([Preço] = @original_Preço) OR ([Preço] IS NULL AND @original_Preço IS NULL)) AND (([Quantidade] = @original_Quantidade) OR ([Quantidade] IS NULL AND @original_Quantidade IS NULL)) AND (([Nome] = @original_Nome) OR ([Nome] IS NULL AND @original_Nome IS NULL)) AND (([Genero] = @original_Genero) OR ([Genero] IS NULL AND @original_Genero IS NULL)) AND (([Ediçao] = @original_Ediçao) OR ([Ediçao] IS NULL AND @original_Ediçao IS NULL))">
-                        <DeleteParameters>
-                            <asp:Parameter Name="original_IdProduto" Type="Int32" />
-                            <asp:Parameter Name="original_Preço" Type="Single" />
-                            <asp:Parameter Name="original_Quantidade" Type="Int32" />
-                            <asp:Parameter Name="original_Nome" Type="String" />
-                            <asp:Parameter Name="original_Genero" Type="String" />
-                            <asp:Parameter Name="original_Ediçao" Type="String" />
-                        </DeleteParameters>
-                        <InsertParameters>
-                            <asp:Parameter Name="Preço" Type="Single" />
-                            <asp:Parameter Name="Quantidade" Type="Int32" />
-                            <asp:Parameter Name="Nome" Type="String" />
-                            <asp:Parameter Name="Genero" Type="String" />
-                            <asp:Parameter Name="Ediçao" Type="String" />
-                        </InsertParameters>
-                        <UpdateParameters>
-                            <asp:Parameter Name="Preço" Type="Single" />
-                            <asp:Parameter Name="Quantidade" Type="Int32" />
-                            <asp:Parameter Name="Nome" Type="String" />
-                            <asp:Parameter Name="Genero" Type="String" />
-                            <asp:Parameter Name="Ediçao" Type="String" />
-                            <asp:Parameter Name="original_IdProduto" Type="Int32" />
-                            <asp:Parameter Name="original_Preço" Type="Single" />
-                            <asp:Parameter Name="original_Quantidade" Type="Int32" />
-                            <asp:Parameter Name="original_Nome" Type="String" />
-                            <asp:Parameter Name="original_Genero" Type="String" />
-                            <asp:Parameter Name="original_Ediçao" Type="String" />
-                        </UpdateParameters>
-                    </asp:SqlDataSource>
                 </td>
                 <td class="auto-style2">&nbsp;</td>
             </tr>
@@ -146,7 +107,9 @@
                 <td class="auto-style9">
                     <asp:TextBox ID="txPreco" runat="server" Width="75px"></asp:TextBox>
                 </td>
-                <td class="auto-style10"></td>
+                <td class="auto-style10">
+                    <asp:Button ID="btInserir" runat="server" OnClick="btInserir_Click" Text="Inserir" />
+                </td>
                 <td class="auto-style10"></td>
             </tr>
             <tr>
@@ -155,7 +118,9 @@
                 <td class="auto-style9">
                     <asp:TextBox ID="txQuantidade" runat="server" Width="77px"></asp:TextBox>
                 </td>
-                <td class="auto-style10">&nbsp;</td>
+                <td class="auto-style10">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Alterar" />
+                </td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
@@ -164,7 +129,9 @@
                 <td class="auto-style9">
                     <asp:TextBox ID="txGenero" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style10">&nbsp;</td>
+                <td class="auto-style10">
+                    <asp:Button ID="Button2" runat="server" Text="Remover" />
+                </td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
@@ -173,9 +140,7 @@
                 <td class="auto-style9">
                     <asp:TextBox ID="txEdicao" runat="server" Width="79px"></asp:TextBox>
                 </td>
-                <td class="auto-style10">
-                    <asp:Button ID="btInserir" runat="server" OnClick="btInserir_Click" Text="Inserir" />
-                </td>
+                <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>

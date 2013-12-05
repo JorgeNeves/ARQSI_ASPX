@@ -2,8 +2,33 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrabARQSI", "TrabARQSI\TrabARQSI.csproj", "{97696765-0F54-4461-A128-CDC2EC6A15FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5DD2379F-A8E1-4268-8C62-6AC31004C062} = {5DD2379F-A8E1-4268-8C62-6AC31004C062}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table_Model", "Table_Model\Table_Model.csproj", "{BAAE0A25-B554-4DF6-8555-0432D4440514}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LogisticaSA", "http://localhost:15791", "{5DD2379F-A8E1-4268-8C62-6AC31004C062}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_15791"
+		Debug.AspNetCompiler.PhysicalPath = "LogisticaSA\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15791\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_15791"
+		Release.AspNetCompiler.PhysicalPath = "LogisticaSA\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15791\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "LogisticaSA\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +44,10 @@ Global
 		{BAAE0A25-B554-4DF6-8555-0432D4440514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAAE0A25-B554-4DF6-8555-0432D4440514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAAE0A25-B554-4DF6-8555-0432D4440514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

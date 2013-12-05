@@ -13,7 +13,7 @@ namespace TrabARQSI
         {
 
             lblusr.Text = Session["user"].ToString();
-            if (Session["user"] == null && Session["tipo"] != "user")
+            if (Session["user"] == null && Session["tipo"].ToString() != "user")
             {
                 Response.Redirect("login.aspx", true);
             }

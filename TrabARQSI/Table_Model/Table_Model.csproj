@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Produto.cs" />
     <Compile Include="BLL\User.cs" />
     <Compile Include="DAL\BaseGateway.cs" />
+    <Compile Include="DAL\ProdutoGateway.cs" />
     <Compile Include="DAL\UserGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

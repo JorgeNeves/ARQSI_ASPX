@@ -16,6 +16,13 @@ namespace Table_Model.DAL
             sqlcmd.ExecuteNonQuery();
             return true;
         }
+
+        public DataTable GetProdutos()
+        {
+            OleDbConnection cnx = GetConnection(true);
+            DataSet ds = ExecuteQuery(cnx, "SELECT * FROM Produto");
+            return ds.Tables[0];
+        }
     }
 
     

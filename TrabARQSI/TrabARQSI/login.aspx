@@ -13,10 +13,9 @@
             width: 157px;
         }
         .auto-style4 {
-            width: 130px;
+            width: 25px;
         }
         .auto-style5 {
-            width: 116px;
         }
     </style>
 </head>
@@ -52,12 +51,19 @@
             <div>
                 <table style="width: 100%; height: 32px;">
                     <tr>
-                        <td class="auto-style5">&nbsp;</td>
-                        <td class="auto-style4">
-                            <asp:Button ID="btnsignin" runat="server" Height="24px" Text="Sign In" Width="116px" OnClick="btnsignin_Click" />
-                        </td>
-                        <td>
+                        <td class="auto-style5">
+                            <asp:Button ID="btnsignin" runat="server" Height="24px" Text="Sign In" Width="116px" OnClick="btnsignin_Click" style="text-align: left" />
                             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td class="auto-style4">
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style5" colspan="3">
+                            <div>
+                            </div>
                         </td>
                     </tr>
                 </table>
