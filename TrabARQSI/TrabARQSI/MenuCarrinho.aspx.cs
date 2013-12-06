@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,21 +10,48 @@ namespace TrabARQSI
 {
     public partial class MenuCarrinho : System.Web.UI.Page
     {
+        protected void GridViewCarrinho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            GridViewRow row = GridViewCarrinho.SelectedRow;
+            
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Table_Model.BLL.User us = new Table_Model.BLL.User();
+            Table_Model.BLL.Carrinho car=new Table_Model.BLL.Carrinho();
             string nuser=Session["user"].ToString();
             int iduser = us.getidUser(nuser);
-            Label1.Text = ""+iduser;
-            string conn="Data Source=gandalf.dei.isep.ipp.pt\\sqlexpress;Initial Catalog=ARQSI056;Persist Security Info=True;User ID=ARQSI056;Password=ARQSI056";
-            string sql = "Select Preço,Quantidade,Nome,Genero,Ediçao FROM ProdutosCarrinhoView where IdCarrinho = (Select IdCarrinho From Carrinho where IdUser="+iduser+" and Atual=1)";
-            SqlDataSource carrinhoatual = new SqlDataSource(conn,sql);
-            carrinhoatual.DataBind();
+            DataTable carrinhoatual = car.getElementosCarrinho(iduser);
+            if (carrinhoatual.Rows.Count==0){
+                lblVazio.Visible=true;
+            }
             GridViewCarrinho.DataSourceID = null;
             GridViewCarrinho.DataSource =carrinhoatual;
             
         }
 
+        
+
+        protected void btnEliminarCarrinho_Click(object sender, EventArgs e)
+        {
+            Table_Model.BLL.Carrinho car = new Table_Model.BLL.Carrinho();
+            Table_Model.BLL.User us = new Table_Model.BLL.User();
+            string nuser = Session["user"].ToString();
+            int iduser = us.getidUser(nuser);
+            car.eliminarCarrinho(iduser);
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            lblpreco.Visible = true;
+            lbldist.Visible = true;
+            DropDist.Visible = true;
+            btnenc.Visible = true;
+        }
+
+        
         
 
         
