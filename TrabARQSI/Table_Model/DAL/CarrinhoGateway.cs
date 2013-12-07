@@ -15,6 +15,23 @@ namespace Table_Model.DAL
         {
 
         }
+        public void atualizarquantidadeproduto(int iduser,int idcar,string nome,string edicao,int novaqtdd)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql = "Select IdProduto From Produto where Nome='" + nome + "' and Ediçao=" + edicao;
+            DataSet ds = ExecuteQuery(cnx, sql);
+            int idprod = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            sql = "Update CarrinhoProduto set Quantidade=" + novaqtdd + " where idCarrinho=" + idcar + " and IdProduto=" + idprod;
+            ExecuteNonQuery(cnx, sql);
+        }
+        
+        public int getidcarrinho(int iduser)
+        {
+            String sql = "Select IdCarrinho FROM Carrinho where IdUser=" + iduser + " and Atual=1";
+            OleDbConnection cnx = GetConnection(true);
+            DataSet ds = ExecuteQuery(cnx, sql);
+            return Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+        }
         public DataTable getElementos(int iduser)
         {
             OleDbConnection cnx = GetConnection(true);
@@ -23,7 +40,16 @@ namespace Table_Model.DAL
             return ds.Tables[0];
 
         }
-        public void removerCarrinho(int iduser)
+        public void removerelementoCarrinho(int iduser, int idcar, string nome, string edicao)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql="Select IdProduto From Produto where Nome='"+nome+"' and Ediçao="+edicao;
+            DataSet ds = ExecuteQuery(cnx, sql);
+            int idprod=Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            sql="Delete From CarrinhoProduto where IdCarrinho="+idcar+" and IdProduto="+idprod;
+            ExecuteNonQuery(cnx, sql);
+        }
+        public void removerelementosCarrinho(int iduser)
         {
             String sql = "Select IdCarrinho FROM Carrinho where IdUser="+iduser+" and Atual=1";
             OleDbConnection cnx = GetConnection(true);
@@ -31,9 +57,7 @@ namespace Table_Model.DAL
             int idcar=Convert.ToInt32(ds.Tables[0].Rows[0][0]);
             sql = "Delete FROM CarrinhoProduto where IdCarrinho="+idcar+"";
             ExecuteNonQuery(cnx, sql);
-            sql = "Delete From Carrinho where IdCarrinho=" + idcar + "";
-            ExecuteNonQuery(cnx, sql);
-        }
+         }
         
         public int removerProduto(int id)
         {

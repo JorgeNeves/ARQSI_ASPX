@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -17,6 +18,14 @@ namespace TrabARQSI
             {
                 Response.Redirect("login.aspx", true);
             }
+            Table_Model.BLL.User us = new Table_Model.BLL.User();
+            Table_Model.BLL.Produto prdt = new Table_Model.BLL.Produto();
+            string nuser = Session["user"].ToString();
+
+            DataTable produtoatual = prdt.GetProdutos();
+            GridView1.DataSource = produtoatual;
+            GridView1.DataBind();
+           
         }
 
         protected void btnlogout_Click(object sender, EventArgs e)
@@ -30,6 +39,7 @@ namespace TrabARQSI
         {
             Response.Redirect("MenuCarrinho.aspx", true);
         }
+        
 
         
 

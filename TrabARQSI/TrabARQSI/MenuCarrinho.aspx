@@ -47,6 +47,13 @@
         .auto-style15 {
             height: 21px;
         }
+        .auto-style16 {
+            width: 156px;
+        }
+        .auto-style17 {
+            height: 21px;
+            width: 156px;
+        }
     </style>
 </head>
 <body style="height: 325px">
@@ -63,7 +70,7 @@
             <tr>
                 <td class="auto-style7"></td>
                 <td class="auto-style10">
-                    <asp:GridView ID="GridViewCarrinho" runat="server" AutoGenerateSelectButton="True" DataSourceID="teste" Width="442px">
+                    <asp:GridView ID="GridViewCarrinho" runat="server" OnSelectedIndexChanged="GridViewCarrinho_SelectedIndexChanged" AutoGenerateSelectButton="True" Width="442px">
                     </asp:GridView>
                 </td>
                 <td class="auto-style1"></td>
@@ -84,13 +91,13 @@
                     <asp:Button ID="btnEncomenda" runat="server" OnClick="Button3_Click" Text="Fazer Encomenda" Width="186px" />
                 </td>
                 <td class="auto-style4">
-                    <asp:Button ID="btnEliminarCarrinho" runat="server" Text="Eliminar Carrinho" Width="110px" OnClick="btnEliminarCarrinho_Click" />
+                    <asp:Button ID="btnEliminarCarrinho" runat="server" Text="Novo Carrinho" Width="120px" OnClick="btnEliminarCarrinho_Click" />
                 </td>
                 <td class="auto-style5">
-                    <asp:Button ID="btnremoversel" runat="server" Height="26px" Text="Remover Selecionado" Visible="False" Width="149px" />
+                    <asp:Button ID="btnremoversel" runat="server" Height="26px" Text="Remover Selecionado" Visible="False" Width="149px" OnClick="btnremoversel_Click" />
                 </td>
-                <td>
-                    <asp:Button ID="btnQuantidade" runat="server" Text="Editar Quantidade" Visible="False" Width="115px" />
+                <td class="auto-style16">
+                    <asp:Button ID="btnQuantidade" runat="server" Text="Editar Quantidade" Visible="False" Width="115px" OnClick="btnQuantidade_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -105,11 +112,14 @@
                 </td>
                 <td class="auto-style13">&nbsp;</td>
                 <td class="auto-style14"></td>
-                <td class="auto-style15">
+                <td class="auto-style17">
                     <asp:Label ID="lblqntidade" runat="server" Text="Nova Quantidade:" Visible="False"></asp:Label>
                     <asp:TextBox ID="txtqtidade" runat="server" Visible="False" Width="29px"></asp:TextBox>
                 </td>
-                <td class="auto-style15"></td>
+                <td class="auto-style15">
+                    <asp:Button ID="btnconfirmar" runat="server" OnClick="btnconfirmar_Click" Text="Confirmar" Visible="False" Width="70px" />
+                    <asp:Button ID="btncancelar" runat="server" OnClick="btncancelar_Click" Text="Cancelar" Visible="False" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style3">
@@ -117,7 +127,7 @@
                 </td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style16">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </table>

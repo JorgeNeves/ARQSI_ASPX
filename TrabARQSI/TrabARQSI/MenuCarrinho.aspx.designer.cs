@@ -130,6 +130,24 @@ namespace TrabARQSI {
         protected global::System.Web.UI.WebControls.TextBox txtqtidade;
         
         /// <summary>
+        /// btnconfirmar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnconfirmar;
+        
+        /// <summary>
+        /// btncancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncancelar;
+        
+        /// <summary>
         /// btnenc control.
         /// </summary>
         /// <remarks>
