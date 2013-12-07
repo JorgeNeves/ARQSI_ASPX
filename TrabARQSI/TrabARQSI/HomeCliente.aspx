@@ -58,11 +58,11 @@
             </tr>
             <tr>
                 <td class="auto-style8">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True">
                     </asp:GridView>
                 </td>
                 <td class="auto-style9" colspan="2">
-                    <table style="width: 100%; height: 112px;">
+                    <table style="width: 100%; height: 141px;">
                         <tr>
                             <td class="auto-style17">&nbsp;</td>
                             <td>
@@ -80,12 +80,19 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                                <asp:Button ID="btnlogout" runat="server" style="margin-left: 18px" Text="Logout" Width="89px" OnClick="btnlogout_Click" />
+                                <asp:Button ID="btnComprar" runat="server" OnClick="btnComprar_Click" Text="MenuCompras" />
                             </td>
                             <td>&nbsp;</td>
                         </tr>
                         <asp:Label ID="Label1" runat="server" Text="Opções:"></asp:Label>
-                    </table>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <asp:Button ID="btnlogout" runat="server" style="margin-left: 18px" Text="Logout" Width="89px" OnClick="btnlogout_Click" />
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </table>
                 </td>
                 <td class="auto-style11">&nbsp;</td>
             </tr>

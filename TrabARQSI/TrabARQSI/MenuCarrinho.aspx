@@ -48,11 +48,11 @@
             height: 21px;
         }
         .auto-style16 {
-            width: 156px;
+            width: 141px;
         }
         .auto-style17 {
             height: 21px;
-            width: 156px;
+            width: 141px;
         }
     </style>
 </head>
@@ -94,12 +94,14 @@
                     <asp:Button ID="btnEliminarCarrinho" runat="server" Text="Novo Carrinho" Width="120px" OnClick="btnEliminarCarrinho_Click" />
                 </td>
                 <td class="auto-style5">
-                    <asp:Button ID="btnremoversel" runat="server" Height="26px" Text="Remover Selecionado" Visible="False" Width="149px" OnClick="btnremoversel_Click" />
+                    <asp:Button ID="btninicial" runat="server" OnClick="btninicial_Click" Text="Pagina Inicial" />
                 </td>
                 <td class="auto-style16">
                     <asp:Button ID="btnQuantidade" runat="server" Text="Editar Quantidade" Visible="False" Width="115px" OnClick="btnQuantidade_Click" />
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="btnremoversel" runat="server" Height="26px" Text="Remover Selecionado" Visible="False" Width="149px" OnClick="btnremoversel_Click" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style12">

@@ -24,6 +24,13 @@ namespace Table_Model.DAL
             return ds.Tables[0];
         }
 
+        public DataTable GetProdutossemid()
+        {
+            OleDbConnection cnx = GetConnection(true);
+            DataSet ds = ExecuteQuery(cnx, "SELECT Preço,Quantidade,Nome,Genero,Ediçao FROM Produto");
+            return ds.Tables[0];
+        }
+
         public int removerProduto(int id)
         {
            string sql = " DELETE FROM Produto WHERE IdProduto="+id;

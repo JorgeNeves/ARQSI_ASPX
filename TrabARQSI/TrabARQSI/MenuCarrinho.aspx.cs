@@ -112,6 +112,11 @@ namespace TrabARQSI
                 Page_Load(null, null);
             }
         }
+
+        protected void btninicial_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomeCliente.aspx", true);
+        }
         
     }
 }

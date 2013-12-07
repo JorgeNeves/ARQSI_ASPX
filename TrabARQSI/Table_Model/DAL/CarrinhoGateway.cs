@@ -24,7 +24,15 @@ namespace Table_Model.DAL
             sql = "Update CarrinhoProduto set Quantidade=" + novaqtdd + " where idCarrinho=" + idcar + " and IdProduto=" + idprod;
             ExecuteNonQuery(cnx, sql);
         }
-        
+        public void addelementocarrinho(int iduser, int idcar, string nome, string edicao,int quantidade)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql = "Select IdProduto From Produto where Nome='" + nome + "' and Ediçao=" + edicao;
+             DataSet ds = ExecuteQuery(cnx, sql);
+            int idprod = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            sql = "Insert into CarrinhoProduto Values ("+idcar+","+idprod+","+quantidade+")";
+            ExecuteNonQuery(cnx, sql);
+        }
         public int getidcarrinho(int iduser)
         {
             String sql = "Select IdCarrinho FROM Carrinho where IdUser=" + iduser + " and Atual=1";
@@ -66,5 +74,10 @@ namespace Table_Model.DAL
             return ExecuteNonQuery(cnx, sql);
         }
 
+
+        internal void addelementoCarrinho(int idUser, int idCar, string nome, string edicao, int quantidade)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

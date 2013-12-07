@@ -17,3 +17,10 @@ C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\bin\Table_Model.pdb
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.csprojResolveAssemblyReference.cache
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.dll
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.pdb
+E:\arqsi\TrabARQSI\TrabARQSI\bin\TrabARQSI.dll
+E:\arqsi\TrabARQSI\TrabARQSI\bin\TrabARQSI.pdb
+E:\arqsi\TrabARQSI\TrabARQSI\bin\Table_Model.dll
+E:\arqsi\TrabARQSI\TrabARQSI\bin\Table_Model.pdb
+E:\arqsi\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.csprojResolveAssemblyReference.cache
+E:\arqsi\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.dll
+E:\arqsi\TrabARQSI\TrabARQSI\obj\Debug\TrabARQSI.pdb

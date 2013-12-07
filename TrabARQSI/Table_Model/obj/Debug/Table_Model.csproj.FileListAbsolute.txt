@@ -13,3 +13,10 @@ C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.csproj.GenerateResource.Cache
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.dll
 C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Table_Model\obj\Debug\Table_Model.pdb
+E:\arqsi\TrabARQSI\Table_Model\bin\Debug\Table_Model.dll.config
+E:\arqsi\TrabARQSI\Table_Model\bin\Debug\Table_Model.dll
+E:\arqsi\TrabARQSI\Table_Model\bin\Debug\Table_Model.pdb
+E:\arqsi\TrabARQSI\Table_Model\obj\Debug\Table_Model.Properties.Resources.resources
+E:\arqsi\TrabARQSI\Table_Model\obj\Debug\Table_Model.csproj.GenerateResource.Cache
+E:\arqsi\TrabARQSI\Table_Model\obj\Debug\Table_Model.dll
+E:\arqsi\TrabARQSI\Table_Model\obj\Debug\Table_Model.pdb

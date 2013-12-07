@@ -67,13 +67,13 @@ namespace TrabARQSI {
         protected global::System.Web.UI.WebControls.Button btnEliminarCarrinho;
         
         /// <summary>
-        /// btnremoversel control.
+        /// btninicial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnremoversel;
+        protected global::System.Web.UI.WebControls.Button btninicial;
         
         /// <summary>
         /// btnQuantidade control.
@@ -83,6 +83,15 @@ namespace TrabARQSI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnQuantidade;
+        
+        /// <summary>
+        /// btnremoversel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnremoversel;
         
         /// <summary>
         /// lbldist control.

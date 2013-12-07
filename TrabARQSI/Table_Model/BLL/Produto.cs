@@ -20,6 +20,12 @@ namespace Table_Model.BLL
             return p.GetProdutos();
         }
 
+        public DataTable GetProdutossemid()
+        {
+            DAL.ProdutoGateway p = new DAL.ProdutoGateway();
+            return p.GetProdutossemid();
+        }
+
        public int alterarProduto(int id, string nome, string preco, int quantidade, string genero, string edicao)
         {
             DAL.ProdutoGateway p = new DAL.ProdutoGateway();
