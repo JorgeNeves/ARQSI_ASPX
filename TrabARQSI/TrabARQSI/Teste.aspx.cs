@@ -20,8 +20,8 @@ namespace TrabARQSI
             Label1.Text = ""+proxy.custo(int.Parse(TextBox1.Text));
 
 
-            ShippingAll.servicenamePortTypeClient proxy1 = new ShippingAll.servicenamePortTypeClient();
-            Label2.Text = "" + proxy1.custo(int.Parse(TextBox1.Text));
+           // ShippingAll.servicenamePortTypeClient proxy1 = new ShippingAll.servicenamePortTypeClient();
+           // Label2.Text = "" + proxy1.custo(int.Parse(TextBox1.Text));
         }
     }
 }

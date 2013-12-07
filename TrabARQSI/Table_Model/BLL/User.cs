@@ -1,4 +1,4 @@
-﻿
+﻿using System.Data;
 
 namespace Table_Model.BLL
 {
@@ -30,6 +30,17 @@ namespace Table_Model.BLL
         {
             DAL.UserGateway dal = new DAL.UserGateway();
             return dal.getiduser(user);
+        }
+
+        public DataTable GetUsers()
+        {
+            DAL.UserGateway p = new DAL.UserGateway();
+            return p.GetUsers();
+        }
+
+        public void alterarTipo(int id, string tipo){
+            DAL.UserGateway p = new DAL.UserGateway();
+            p.alterarTipo(id, tipo);
         }
     }
 }

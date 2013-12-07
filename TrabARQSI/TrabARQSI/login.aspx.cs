@@ -33,6 +33,10 @@ namespace TrabARQSI.App_Code
                 {
                     Response.Redirect("HomeCliente.aspx", true);
                 }
+                if (Session["tipo"].ToString() == "administrador")
+                {
+                    Response.Redirect("HomeAdmin.aspx", true);
+                }
             }
             else
             {
