@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeCliente.aspx.cs" Inherits="TrabARQSI.HomeCliente" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeCliente.aspx.cs" Inherits="EnviarMAILS.HomeCliente" %>
 
 <!DOCTYPE html>
 

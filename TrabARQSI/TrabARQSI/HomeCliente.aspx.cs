@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrabARQSI
+namespace EnviarMAILS
 {
     public partial class HomeCliente : System.Web.UI.Page
     {

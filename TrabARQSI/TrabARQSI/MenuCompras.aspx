@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuCompras.aspx.cs" Inherits="TrabARQSI.MenuCompras" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuCompras.aspx.cs" Inherits="EnviarMAILS.MenuCompras" %>
 
 <!DOCTYPE html>
 

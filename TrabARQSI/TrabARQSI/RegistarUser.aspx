@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistarUser.aspx.cs" Inherits="TrabARQSI.RegistarUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistarUser.aspx.cs" Inherits="EnviarMAILS.RegistarUser" %>
 
 <!DOCTYPE html>
 

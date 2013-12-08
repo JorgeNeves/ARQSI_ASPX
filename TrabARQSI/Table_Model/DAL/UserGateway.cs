@@ -32,7 +32,7 @@ namespace Table_Model.DAL
                return false;
            }
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao registar utilizador");
             }
@@ -52,7 +52,7 @@ namespace Table_Model.DAL
                return false;
            }
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao validar user");
             }
@@ -65,7 +65,7 @@ namespace Table_Model.DAL
             DataSet s = GetDataSet(sqlCount);
             return (string)s.Tables[0].Rows[0]["tipo"];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar tipo do utilizador");
             }
@@ -79,7 +79,7 @@ namespace Table_Model.DAL
             DataSet s = GetDataSet(sqlid);
             return (int)s.Tables[0].Rows[0]["idUser"];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar id do utilizador");
             }
@@ -92,7 +92,7 @@ namespace Table_Model.DAL
             DataSet ds = ExecuteQuery(cnx, "SELECT IdUser,username,tipo FROM Utilizadores where tipo!='administrador'");
             return ds.Tables[0];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar todos os utilizadores");
             }
@@ -105,7 +105,7 @@ namespace Table_Model.DAL
             OleDbConnection cnx = GetConnection(true);
             ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao alterar tipo de utilizador");
             }

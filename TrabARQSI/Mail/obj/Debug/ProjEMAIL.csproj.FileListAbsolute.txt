@@ -1,0 +1,4 @@
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Mail\bin\Debug\ProjEMAIL.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Mail\bin\Debug\ProjEMAIL.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Mail\obj\Debug\ProjEMAIL.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Mail\obj\Debug\ProjEMAIL.pdb

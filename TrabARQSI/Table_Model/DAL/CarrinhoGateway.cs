@@ -26,7 +26,7 @@ namespace Table_Model.DAL
                 sql = "Update CarrinhoProduto set Quantidade=" + novaqtdd + " where idCarrinho=" + idcar + " and IdProduto=" + idprod;
                 ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro a atualizar quantidade do produto no carrinho de compras");
             }
@@ -43,7 +43,7 @@ namespace Table_Model.DAL
                 sql = "Insert into CarrinhoProduto Values (" + idcar + "," + idprod + "," + quantidade + ")";
                 ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao adicionar elemento no carrinho");
             }
@@ -56,7 +56,7 @@ namespace Table_Model.DAL
                 DataSet ds = ExecuteQuery(cnx, sql);
                 return Convert.ToInt32(ds.Tables[0].Rows[0][0]);
            }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao fazer get id carrinho");
             }
@@ -70,7 +70,7 @@ namespace Table_Model.DAL
             DataSet ds = ExecuteQuery(cnx,sql);
             return ds.Tables[0];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar elementos do carrinho na base de dados");
             }
@@ -86,7 +86,7 @@ namespace Table_Model.DAL
             sql="Delete From CarrinhoProduto where IdCarrinho="+idcar+" and IdProduto="+idprod;
             ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao remover elemento no carrinho");
             }
@@ -101,7 +101,7 @@ namespace Table_Model.DAL
             sql = "Delete FROM CarrinhoProduto where IdCarrinho="+idcar+"";
             ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao remover todos os elementos do carrinho");
             }
@@ -114,7 +114,7 @@ namespace Table_Model.DAL
             OleDbConnection cnx = GetConnection(true);
             return ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao remover produto no carrinho");
             }

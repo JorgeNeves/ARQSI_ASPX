@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-namespace TrabARQSI
+namespace EnviarMAILS
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IEnviaProdutos" in both code and config file together.
     [ServiceContract]

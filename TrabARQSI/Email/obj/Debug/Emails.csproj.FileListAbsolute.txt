@@ -1,0 +1,5 @@
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Email\bin\Email.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Email\bin\Email.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Email\obj\Debug\Emails.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Email\obj\Debug\Email.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\Email\obj\Debug\Email.pdb

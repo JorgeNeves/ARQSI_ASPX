@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrabARQSI.App_Code
+namespace EnviarMAILS.App_Code
 {
     public partial class login : System.Web.UI.Page
     {

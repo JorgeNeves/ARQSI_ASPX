@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrabARQSI
+namespace EnviarMAILS
 {
     public partial class HomeAdmin : System.Web.UI.Page
     {
@@ -19,6 +19,7 @@ namespace TrabARQSI
             else
             {
                 Response.Redirect("login.aspx", true);
+                
             }
             
         }
@@ -44,6 +45,7 @@ namespace TrabARQSI
                 Button1.Text = "Despromover";
             }
             Button1.Enabled = true;
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace TrabARQSI
             Table_Model.BLL.User userBLL = new Table_Model.BLL.User();
             GridView1.DataSource = userBLL.GetUsers();
             GridView1.DataBind();
+            
         }
     }
 }

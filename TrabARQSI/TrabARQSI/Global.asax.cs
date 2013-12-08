@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace TrabARQSI
+
+namespace EnviarMAILS
 {
     public class Global : System.Web.HttpApplication
     {
@@ -35,7 +36,8 @@ namespace TrabARQSI
             Exception ex = Server.GetLastError();
             if (ex.Message != "File does not exist.")
             {
-                Email.enviarEmail("1110603@isep.ipp.pt", "Erro na aplicação", ex.ToString());
+                EnviarMAILS.Email.enviarEmail("1110603@isep.ipp.pt", "Erro na aplicação", ex.ToString());
+                EnviarMAILS.Email.enviarEmail("1110297@isep.ipp.pt", "Erro na aplicação", ex.ToString());
                 Response.Redirect("paginaErro.aspx");
             }
         }

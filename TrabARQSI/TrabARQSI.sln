@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LogisticaSA", "http://local
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnviarMAILS", "EnviarMAILS\EnviarMAILS.csproj", "{8428C757-6757-4576-BD5B-2DDAE4944EC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{5DD2379F-A8E1-4268-8C62-6AC31004C062}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8428C757-6757-4576-BD5B-2DDAE4944EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8428C757-6757-4576-BD5B-2DDAE4944EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8428C757-6757-4576-BD5B-2DDAE4944EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8428C757-6757-4576-BD5B-2DDAE4944EC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

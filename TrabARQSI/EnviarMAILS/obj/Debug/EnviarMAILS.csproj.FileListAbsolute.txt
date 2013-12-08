@@ -1,0 +1,4 @@
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\EnviarMAILS\bin\Debug\EnviarMAILS.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\EnviarMAILS\bin\Debug\EnviarMAILS.pdb
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\EnviarMAILS\obj\Debug\EnviarMAILS.dll
+C:\Users\Jorge\Documents\Trab2ARQSI\TrabARQSI\EnviarMAILS\obj\Debug\EnviarMAILS.pdb

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Teste.aspx.cs" Inherits="TrabARQSI.Teste" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Teste.aspx.cs" Inherits="EnviarMAILS.Teste" %>
 
 <!DOCTYPE html>
 

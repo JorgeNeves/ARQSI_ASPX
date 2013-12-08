@@ -15,11 +15,26 @@ namespace Table_Model.DAL
             string sql = "INSERT INTO Produto VALUES('" + preco + "'," + quantidade + ",'"+nome +"','" + genero + "','"+edicao+"')";
             OleDbCommand sqlcmd = new OleDbCommand(sql, cnx);
             sqlcmd.ExecuteNonQuery();
+            avisaUsers(nome, preco, genero);
             return true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao adicionar produto");
+            }
+        }
+
+        private void avisaUsers(string nome, string preco, string genero)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql = "select email from Utilizadores";
+            DataSet ds = ExecuteQuery(cnx, sql);
+            int i = 0;
+            while (i < ds.Tables[0].Rows.Count)
+            {
+                string txt = "Informamos que foi adicionado o livro "+nome+" e neste momento custa "+preco +" euros, este livro pertence ao genero de " +genero+".";
+                EnviarMAILS.Email.enviarEmail(ds.Tables[0].Rows[i][0].ToString(), "Novo Livro", txt);
+                i++;
             }
         }
 
@@ -30,7 +45,7 @@ namespace Table_Model.DAL
             DataSet ds = ExecuteQuery(cnx, "SELECT * FROM Produto");
             return ds.Tables[0];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao fazer select de todos os produtos");
             }
@@ -43,7 +58,7 @@ namespace Table_Model.DAL
             DataSet ds = ExecuteQuery(cnx, "SELECT Preço,Quantidade,Nome,Genero,Ediçao FROM Produto");
             return ds.Tables[0];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar produtos mas sem o id");
             }
@@ -56,7 +71,7 @@ namespace Table_Model.DAL
            OleDbConnection cnx = GetConnection(true);
            return ExecuteNonQuery(cnx, sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao remover produto");
             }
@@ -69,7 +84,7 @@ namespace Table_Model.DAL
             OleDbConnection cnx = GetConnection(true);
             return ExecuteNonQuery(cnx,sql);
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao alterar produto");
             }
@@ -89,7 +104,7 @@ namespace Table_Model.DAL
                 }
                 return ds.Tables[0];
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 throw new Exception("Erro ao selecionar sugestoes de produtos");
             }

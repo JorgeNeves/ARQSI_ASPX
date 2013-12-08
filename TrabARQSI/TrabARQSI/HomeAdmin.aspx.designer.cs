@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrabARQSI {
+namespace EnviarMAILS {
     
     
     public partial class HomeAdmin {

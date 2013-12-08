@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="paginaErro.aspx.cs" Inherits="TrabARQSI.paginaErro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="paginaErro.aspx.cs" Inherits="EnviarMAILS.paginaErro" %>
 
 <!DOCTYPE html>
 

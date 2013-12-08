@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrabARQSI
+namespace EnviarMAILS
 {
     public partial class MenuCompras : System.Web.UI.Page
     {
@@ -46,8 +46,7 @@ namespace TrabARQSI
 
         protected void btnOK_Click(object sender, EventArgs e)
         {
-            try
-            {
+
                 if (int.Parse(txtqtdd.Text) > 0)
                 {
                     GridViewRow row = GridView1.SelectedRow;
@@ -66,21 +65,6 @@ namespace TrabARQSI
                     Page_Load(null, null);
                 }
             }
-            catch (Exception ex)
-            {
-               throw new Exception("Erro a definir quantidade");
-
-            }
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
-        {
 
         }
     }
-}

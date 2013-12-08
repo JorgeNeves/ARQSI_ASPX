@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrabARQSI.App_Code {
+namespace EnviarMAILS.App_Code {
     
     
     public partial class login {

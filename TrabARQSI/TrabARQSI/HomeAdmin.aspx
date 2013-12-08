@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeAdmin.aspx.cs" Inherits="TrabARQSI.HomeAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeAdmin.aspx.cs" Inherits="EnviarMAILS.HomeAdmin" %>
 
 <!DOCTYPE html>
 

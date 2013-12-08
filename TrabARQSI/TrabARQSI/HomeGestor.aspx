@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeGestor.aspx.cs" Inherits="TrabARQSI.HomeGestor" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeGestor.aspx.cs" Inherits="EnviarMAILS.HomeGestor" %>
 
 <!DOCTYPE html>
 

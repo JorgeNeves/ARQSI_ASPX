@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrabARQSI.ShippingAll {
+namespace EnviarMAILS.ShippingAll {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -19,10 +19,10 @@ namespace TrabARQSI.ShippingAll {
         [System.ServiceModel.OperationContractAttribute(Action="http://uvm056.dei.isep.ipp.pt/~uvm056/ShippingAll.php#custo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Pass")]
-        TrabARQSI.ShippingAll.custoResponse custo(TrabARQSI.ShippingAll.custoRequest request);
+        EnviarMAILS.ShippingAll.custoResponse custo(EnviarMAILS.ShippingAll.custoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://uvm056.dei.isep.ipp.pt/~uvm056/ShippingAll.php#custo", ReplyAction="*")]
-        System.Threading.Tasks.Task<TrabARQSI.ShippingAll.custoResponse> custoAsync(TrabARQSI.ShippingAll.custoRequest request);
+        System.Threading.Tasks.Task<EnviarMAILS.ShippingAll.custoResponse> custoAsync(EnviarMAILS.ShippingAll.custoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,12 +62,12 @@ namespace TrabARQSI.ShippingAll {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface servicenamePortTypeChannel : TrabARQSI.ShippingAll.servicenamePortType, System.ServiceModel.IClientChannel {
+    public interface servicenamePortTypeChannel : EnviarMAILS.ShippingAll.servicenamePortType, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class servicenamePortTypeClient : System.ServiceModel.ClientBase<TrabARQSI.ShippingAll.servicenamePortType>, TrabARQSI.ShippingAll.servicenamePortType {
+    public partial class servicenamePortTypeClient : System.ServiceModel.ClientBase<EnviarMAILS.ShippingAll.servicenamePortType>, EnviarMAILS.ShippingAll.servicenamePortType {
         
         public servicenamePortTypeClient() {
         }
@@ -89,26 +89,26 @@ namespace TrabARQSI.ShippingAll {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TrabARQSI.ShippingAll.custoResponse TrabARQSI.ShippingAll.servicenamePortType.custo(TrabARQSI.ShippingAll.custoRequest request) {
+        EnviarMAILS.ShippingAll.custoResponse EnviarMAILS.ShippingAll.servicenamePortType.custo(EnviarMAILS.ShippingAll.custoRequest request) {
             return base.Channel.custo(request);
         }
         
         public float custo(int x) {
-            TrabARQSI.ShippingAll.custoRequest inValue = new TrabARQSI.ShippingAll.custoRequest();
+            EnviarMAILS.ShippingAll.custoRequest inValue = new EnviarMAILS.ShippingAll.custoRequest();
             inValue.x = x;
-            TrabARQSI.ShippingAll.custoResponse retVal = ((TrabARQSI.ShippingAll.servicenamePortType)(this)).custo(inValue);
+            EnviarMAILS.ShippingAll.custoResponse retVal = ((EnviarMAILS.ShippingAll.servicenamePortType)(this)).custo(inValue);
             return retVal.Pass;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TrabARQSI.ShippingAll.custoResponse> TrabARQSI.ShippingAll.servicenamePortType.custoAsync(TrabARQSI.ShippingAll.custoRequest request) {
+        System.Threading.Tasks.Task<EnviarMAILS.ShippingAll.custoResponse> EnviarMAILS.ShippingAll.servicenamePortType.custoAsync(EnviarMAILS.ShippingAll.custoRequest request) {
             return base.Channel.custoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TrabARQSI.ShippingAll.custoResponse> custoAsync(int x) {
-            TrabARQSI.ShippingAll.custoRequest inValue = new TrabARQSI.ShippingAll.custoRequest();
+        public System.Threading.Tasks.Task<EnviarMAILS.ShippingAll.custoResponse> custoAsync(int x) {
+            EnviarMAILS.ShippingAll.custoRequest inValue = new EnviarMAILS.ShippingAll.custoRequest();
             inValue.x = x;
-            return ((TrabARQSI.ShippingAll.servicenamePortType)(this)).custoAsync(inValue);
+            return ((EnviarMAILS.ShippingAll.servicenamePortType)(this)).custoAsync(inValue);
         }
     }
 }

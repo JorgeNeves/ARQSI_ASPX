@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrabARQSI.EnviaProdutosService {
+namespace EnviarMAILS.EnviaProdutosService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -29,12 +29,12 @@ namespace TrabARQSI.EnviaProdutosService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEnviaProdutosChannel : TrabARQSI.EnviaProdutosService.IEnviaProdutos, System.ServiceModel.IClientChannel {
+    public interface IEnviaProdutosChannel : EnviarMAILS.EnviaProdutosService.IEnviaProdutos, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EnviaProdutosClient : System.ServiceModel.ClientBase<TrabARQSI.EnviaProdutosService.IEnviaProdutos>, TrabARQSI.EnviaProdutosService.IEnviaProdutos {
+    public partial class EnviaProdutosClient : System.ServiceModel.ClientBase<EnviarMAILS.EnviaProdutosService.IEnviaProdutos>, EnviarMAILS.EnviaProdutosService.IEnviaProdutos {
         
         public EnviaProdutosClient() {
         }

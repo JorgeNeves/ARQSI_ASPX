@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrabARQSI.LogisticaSA {
+namespace EnviarMAILS.LogisticaSA {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -29,12 +29,12 @@ namespace TrabARQSI.LogisticaSA {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceLogisticaSAChannel : TrabARQSI.LogisticaSA.IServiceLogisticaSA, System.ServiceModel.IClientChannel {
+    public interface IServiceLogisticaSAChannel : EnviarMAILS.LogisticaSA.IServiceLogisticaSA, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceLogisticaSAClient : System.ServiceModel.ClientBase<TrabARQSI.LogisticaSA.IServiceLogisticaSA>, TrabARQSI.LogisticaSA.IServiceLogisticaSA {
+    public partial class ServiceLogisticaSAClient : System.ServiceModel.ClientBase<EnviarMAILS.LogisticaSA.IServiceLogisticaSA>, EnviarMAILS.LogisticaSA.IServiceLogisticaSA {
         
         public ServiceLogisticaSAClient() {
         }

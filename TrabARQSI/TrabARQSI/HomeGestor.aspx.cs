@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-namespace TrabARQSI
+namespace EnviarMAILS
 {
     public partial class HomeGestor : System.Web.UI.Page
     {

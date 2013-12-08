@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrabARQSI</RootNamespace>
+    <RootNamespace>EnviarMAILS</RootNamespace>
     <AssemblyName>TrabARQSI</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -54,9 +54,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Extensions.Design" />
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -104,6 +101,9 @@
     </Content>
     <None Include="Service References\ShippingAll\configuration91.svcinfo" />
     <None Include="Service References\ShippingAll\configuration.svcinfo" />
+    <Content Include="Service References\ShippingAll\EnviarMAILS.ShippingAll.custoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ShippingAll\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -113,7 +113,6 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Email.cs" />
     <Compile Include="EnviaProdutos.svc.cs">
       <DependentUpon>EnviaProdutos.svc</DependentUpon>
     </Compile>
@@ -217,9 +216,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ShippingAll\ShippingAll.wsdl" />
-    <Content Include="Service References\ShippingAll\TrabARQSI.ShippingAll.custoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -228,6 +224,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EnviarMAILS\EnviarMAILS.csproj">
+      <Project>{8428c757-6757-4576-bd5b-2ddae4944ec2}</Project>
+      <Name>EnviarMAILS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Table_Model\Table_Model.csproj">
       <Project>{baae0a25-b554-4df6-8555-0432d4440514}</Project>
       <Name>Table_Model</Name>

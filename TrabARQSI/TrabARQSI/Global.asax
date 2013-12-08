@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="TrabARQSI.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="EnviarMAILS.Global" Language="C#" %>
