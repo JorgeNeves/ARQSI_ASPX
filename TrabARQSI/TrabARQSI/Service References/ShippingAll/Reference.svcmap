@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6fad0358-ae7b-4ef4-a28f-b1504e3f7bf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a2bc6ac-1d17-49b2-a0a1-6677106d21bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="http://uvm056.dei.isep.ipp.pt/~uvm056/ShippingAll.php?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ShippingAll.wsdl" MetadataType="Wsdl" ID="ec1929df-d8a1-4eb4-9fd0-7014120aa5da" SourceId="1" SourceUrl="http://uvm056.dei.isep.ipp.pt/~uvm056/ShippingAll.php?wsdl" />
+    <MetadataFile FileName="ShippingAll.wsdl" MetadataType="Wsdl" ID="d8c8f973-1e9d-4fa4-9dbc-0299076f2977" SourceId="1" SourceUrl="http://uvm056.dei.isep.ipp.pt/~uvm056/ShippingAll.php?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

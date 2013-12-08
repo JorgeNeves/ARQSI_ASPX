@@ -17,12 +17,19 @@ namespace Table_Model.DAL
         }
         public void atualizarquantidadeproduto(int iduser,int idcar,string nome,string edicao,int novaqtdd)
         {
-            OleDbConnection cnx = GetConnection(true);
-            string sql = "Select IdProduto From Produto where Nome='" + nome + "' and Ediçao=" + edicao;
-            DataSet ds = ExecuteQuery(cnx, sql);
-            int idprod = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
-            sql = "Update CarrinhoProduto set Quantidade=" + novaqtdd + " where idCarrinho=" + idcar + " and IdProduto=" + idprod;
-            ExecuteNonQuery(cnx, sql);
+            try
+            {
+                OleDbConnection cnx = GetConnection(true);
+                string sql = "Select IdProduto From Produto where Nome='" + nome + "' and Ediçao='" + edicao+"'";
+                DataSet ds = ExecuteQuery(cnx, sql);
+                int idprod = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+                sql = "Update CarrinhoProduto set Quantidade=" + novaqtdd + " where idCarrinho=" + idcar + " and IdProduto=" + idprod;
+                ExecuteNonQuery(cnx, sql);
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro na BD", ex);
+            }
         }
         public void addelementocarrinho(int iduser, int idcar, string nome, string edicao,int quantidade)
         {

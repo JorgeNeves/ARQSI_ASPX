@@ -13,15 +13,19 @@ namespace TrabARQSI
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            lblusr.Text = Session["user"].ToString();
-            if (Session["user"] == null && Session["tipo"].ToString() != "user")
+            
+            if (Session["user"] == null)
+            {
+                Response.Redirect("login.aspx", true);
+            }
+            if (Session["tipo"].ToString() != "user")
             {
                 Response.Redirect("login.aspx", true);
             }
             Table_Model.BLL.User us = new Table_Model.BLL.User();
             Table_Model.BLL.Produto prdt = new Table_Model.BLL.Produto();
             string nuser = Session["user"].ToString();
-
+            lblusr.Text = Session["user"].ToString();
             DataTable produtoatual = prdt.GetProdutos();
             GridView1.DataSource = produtoatual;
             GridView1.DataBind();

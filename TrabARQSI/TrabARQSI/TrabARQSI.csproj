@@ -78,6 +78,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <None Include="Service References\ShippingAll\configuration91.svcinfo" />
+    <None Include="Service References\ShippingAll\configuration.svcinfo" />
+    <None Include="Service References\ShippingAll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Teste.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -138,6 +144,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ShippingAll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +180,10 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Site1.Master" />
+    <None Include="Service References\ShippingAll\ShippingAll.wsdl" />
+    <Content Include="Service References\ShippingAll\TrabARQSI.ShippingAll.custoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\LogisticaSA\" />
+    <WCFMetadataStorage Include="Service References\ShippingAll\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

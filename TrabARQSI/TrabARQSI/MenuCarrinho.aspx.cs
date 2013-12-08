@@ -20,6 +20,14 @@ namespace TrabARQSI
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("login.aspx", true);
+            }
+            if (Session["tipo"].ToString() != "user")
+            {
+                Response.Redirect("login.aspx", true);
+            }
             Table_Model.BLL.User us = new Table_Model.BLL.User();
             Table_Model.BLL.Carrinho car=new Table_Model.BLL.Carrinho();
             string nuser=Session["user"].ToString();
@@ -31,8 +39,6 @@ namespace TrabARQSI
             GridViewCarrinho.DataSource =carrinhoatual;
             GridViewCarrinho.DataBind();
         }
-
-        
 
         protected void btnEliminarCarrinho_Click(object sender, EventArgs e)
         {
@@ -48,11 +54,9 @@ namespace TrabARQSI
         {
             lblpreco.Visible = true;
             lbldist.Visible = true;
-            DropDist.Visible = true;
+            dropLogistica.Visible = true;
             btnenc.Visible = true;
-        }
-
-        
+        }    
 
         protected void btnremoversel_Click(object sender, EventArgs e)
         {
@@ -115,7 +119,24 @@ namespace TrabARQSI
 
         protected void btninicial_Click(object sender, EventArgs e)
         {
-            Response.Redirect("HomeCliente.aspx", true);
+           Response.Redirect("HomeCliente.aspx", true);
+        }
+
+        protected void DropDist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Calcular quantidade de livros/revistas
+            int quantidade = 20;
+            if (dropLogistica.SelectedValue.ToString() == "LogisticaSA")
+            {
+                LogisticaSA.ServiceLogisticaSAClient logisticaSA = new LogisticaSA.ServiceLogisticaSAClient();
+                
+                lblpreco.Text = logisticaSA.custo(quantidade).ToString();
+            }
+            else
+            {
+                ShippingAll.servicenamePortTypeClient ShippingAll = new ShippingAll.servicenamePortTypeClient();
+                lblpreco.Text = ShippingAll.custo(quantidade).ToString();
+            }
         }
         
     }

@@ -106,7 +106,7 @@
             <tr>
                 <td class="auto-style12">
                     <asp:Label ID="lbldist" runat="server" Text="Escolher Distribuidora:" Visible="False"></asp:Label>
-                    <asp:DropDownList ID="DropDist" runat="server" Visible="False">
+                    <asp:DropDownList ID="dropLogistica" runat="server" Visible="False" OnSelectedIndexChanged="DropDist_SelectedIndexChanged">
                         <asp:ListItem>LogisticaSA</asp:ListItem>
                         <asp:ListItem Value="ShippingAll"></asp:ListItem>
                     </asp:DropDownList>
