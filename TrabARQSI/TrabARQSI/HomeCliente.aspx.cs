@@ -29,6 +29,10 @@ namespace TrabARQSI
             DataTable produtoatual = prdt.GetProdutos();
             GridView1.DataSource = produtoatual;
             GridView1.DataBind();
+
+            int idUser = us.getidUser(nuser);
+            gdvSugestao.DataSource = prdt.getSugestoes(idUser);
+            gdvSugestao.DataBind();
            
         }
 

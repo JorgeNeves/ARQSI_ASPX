@@ -38,6 +38,8 @@ namespace TrabARQSI
             }
             GridViewCarrinho.DataSource =carrinhoatual;
             GridViewCarrinho.DataBind();
+
+
         }
 
         protected void btnEliminarCarrinho_Click(object sender, EventArgs e)

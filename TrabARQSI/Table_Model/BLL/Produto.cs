@@ -36,6 +36,12 @@ namespace Table_Model.BLL
            DAL.ProdutoGateway p = new DAL.ProdutoGateway();
            return p.removerProduto(id);
        }
+
+       public DataTable getSugestoes(int idUser)
+       {
+           DAL.ProdutoGateway prodDAL = new DAL.ProdutoGateway();
+           return prodDAL.getSugestoes(idUser);
+       }
     }
 
    

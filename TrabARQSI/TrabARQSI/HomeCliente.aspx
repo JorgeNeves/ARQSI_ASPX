@@ -26,8 +26,15 @@
             margin-bottom: 0px;
         }
         .auto-style22 {
-            height: 14px;
             margin-left: 40px;
+        }
+        .auto-style23 {
+            margin-left: 40px;
+            width: 485px;
+        }
+        .auto-style24 {
+            height: 32px;
+            width: 485px;
         }
     </style>
 </head>
@@ -45,7 +52,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style22">
+                <td class="auto-style23">
                                 <asp:Button ID="btncarrinho" runat="server" style="margin-left: 24px" Text="Carrinho" Width="84px" OnClick="btncarrinho_Click" />
                                 <asp:Button ID="btnencomendas" runat="server" Text="Menu Encomendas" Width="135px" CssClass="auto-style20" />
                                 <asp:Button ID="btnComprar" runat="server" OnClick="btnComprar_Click" Text="MenuCompras" />
@@ -57,14 +64,37 @@
                 <td class="auto-style22"></td>
             </tr>
             <tr>
-                <td class="auto-style9">Produtos Disponiveis:</td>
+                <td class="auto-style24">Produtos Disponiveis:</td>
                 <td class="auto-style9">
                     &nbsp;</td>
                 <td class="auto-style11">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True">
+                <td class="auto-style24">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                        <AlternatingRowStyle BackColor="White" />
+                        <FooterStyle BackColor="#CCCC99" />
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle BackColor="#F7F7DE" />
+                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                    </asp:GridView>
+                </td>
+                <td>Sugestões<asp:GridView ID="gdvSugestao" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AllowPaging="True">
+                    <AlternatingRowStyle BackColor="White" />
+                    <FooterStyle BackColor="#CCCC99" />
+                    <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                    <RowStyle BackColor="#F7F7DE" />
+                    <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                    <SortedAscendingHeaderStyle BackColor="#848384" />
+                    <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                    <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
                 </td>
                 <td class="auto-style9">
@@ -72,7 +102,7 @@
                 <td class="auto-style11">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">Utilizador Logado:<asp:Label ID="lblusr" runat="server" Text="lblusr"></asp:Label>
+                <td class="auto-style24">Utilizador Logado:<asp:Label ID="lblusr" runat="server" Text="lblusr"></asp:Label>
                 </td>
                 <td class="auto-style9">
                     &nbsp;</td>

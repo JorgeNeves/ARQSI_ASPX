@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-
 using System.Web.UI.WebControls;
 
 namespace TrabARQSI
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class paginaErro : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

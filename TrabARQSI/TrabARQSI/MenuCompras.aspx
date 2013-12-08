@@ -46,6 +46,7 @@
         .auto-style13 {
             height: 34px;
         }
+        .auto-style14 {}
     </style>
 </head>
 <body style="height: 327px">
@@ -66,7 +67,17 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style5">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateSelectButton="True">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateSelectButton="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="auto-style14" ForeColor="Black" GridLines="Vertical" Width="317px">
+                        <AlternatingRowStyle BackColor="White" />
+                        <FooterStyle BackColor="#CCCC99" />
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle BackColor="#F7F7DE" />
+                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                        <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
                 </td>
                 <td>&nbsp;</td>
@@ -85,20 +96,21 @@
                                 <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Voltar ao Menu Anterior" Width="148px" />
                             </td>
                             <td>
-                                <asp:Button ID="Button5" runat="server" Text="Button" />
-                            </td>
+                                &nbsp;</td>
                             <td>
-                                <asp:Button ID="Button2" runat="server" Text="Button" />
-                            </td>
+                                &nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style10">
                                 <asp:Label ID="lblqtdd" runat="server" Text="Quantidade:" Visible="False"></asp:Label>
                                 <asp:TextBox ID="txtqtdd" runat="server" Visible="False" Width="28px"></asp:TextBox>
+                                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtqtdd" Display="Dynamic" ErrorMessage="A quantidade deve ser um numero inteiro" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
                                 <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" Text="OK" Visible="False" />
                                 <asp:Button ID="btncancel" runat="server" style="margin-bottom: 0px" Text="Cancelar" Visible="False" Width="58px" />
                             </td>
-                            <td class="auto-style11"></td>
+                            <td class="auto-style11">
+                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+                            </td>
                             <td class="auto-style12"></td>
                             <td class="auto-style13"></td>
                             <td class="auto-style13"></td>

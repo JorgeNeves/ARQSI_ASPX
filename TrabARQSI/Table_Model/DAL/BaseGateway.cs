@@ -23,24 +23,34 @@ namespace Table_Model.DAL
             }
 		}
 
-        
-
 		protected OleDbConnection GetConnection(bool open)
 		{
-			OleDbConnection cnx = new OleDbConnection(CONNSTR);
-			if (open)
-				cnx.Open();
-			return cnx;
+            try{
+                OleDbConnection cnx = new OleDbConnection(CONNSTR);
+			    if (open)
+				    cnx.Open();
+			    return cnx;
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro na BD", ex);
+            }
 		}
 
         protected DataSet GetDataSet(string Sql)
         {
+            try{
             OleDbConnection conn = new OleDbConnection(_CONNSTR);
             OleDbDataAdapter adp = new OleDbDataAdapter(Sql, conn);
             DataSet ds = new DataSet();
             adp.Fill(ds);
             conn.Close();
             return ds;
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro na BD", ex);
+            }
         }
 
         protected DataSet ExecuteQuery(OleDbConnection cnx, string sql)
@@ -60,8 +70,14 @@ namespace Table_Model.DAL
 
         protected int ExecuteNonQuery(OleDbConnection cnx, string sql)
         {
+            try{
             OleDbCommand cmd = new OleDbCommand(sql, cnx);
             return cmd.ExecuteNonQuery();
+            }
+            catch (OleDbException ex)
+            {
+                throw new ApplicationException("Erro na BD", ex);
+            }
         }
 
         protected void FillDataSet(OleDbConnection cnx, string sql, DataSet ds, string tableName)
