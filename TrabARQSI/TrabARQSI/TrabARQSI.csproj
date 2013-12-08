@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.0.3\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -62,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EnviaProdutos.svc" />
     <Content Include="HomeAdmin.aspx" />
     <Content Include="HomeCliente.aspx" />
     <Content Include="HomeGestor.aspx" />
@@ -71,6 +76,22 @@
     <Content Include="MenuCarrinho.aspx" />
     <Content Include="MenuCompras.aspx" />
     <Content Include="RegistarUser.aspx" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <Content Include="packages.config" />
+    <None Include="Service References\EnviaProdutosService\configuration91.svcinfo" />
+    <None Include="Service References\EnviaProdutosService\configuration.svcinfo" />
+    <Content Include="Service References\EnviaProdutosService\EnviaProdutos1.wsdl" />
+    <None Include="Service References\EnviaProdutosService\EnviaProdutos4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EnviaProdutosService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\EnviaProdutosService\EnviaProdutos1.disco" />
     <Content Include="Service References\LogisticaSA\ServiceLogisticaSA.disco" />
     <Content Include="Service References\LogisticaSA\configuration91.svcinfo" />
     <Content Include="Service References\LogisticaSA\configuration.svcinfo" />
@@ -89,6 +110,9 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnviaProdutos.svc.cs">
+      <DependentUpon>EnviaProdutos.svc</DependentUpon>
+    </Compile>
     <Compile Include="HomeAdmin.aspx.cs">
       <DependentUpon>HomeAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +134,7 @@
     <Compile Include="HomeGestor.aspx.designer.cs">
       <DependentUpon>HomeGestor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IEnviaProdutos.cs" />
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,6 +163,11 @@
     </Compile>
     <Compile Include="RegistarUser.aspx.designer.cs">
       <DependentUpon>RegistarUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EnviaProdutosService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\LogisticaSA\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -202,6 +232,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EnviaProdutosService\" />
     <WCFMetadataStorage Include="Service References\LogisticaSA\" />
     <WCFMetadataStorage Include="Service References\ShippingAll\" />
   </ItemGroup>

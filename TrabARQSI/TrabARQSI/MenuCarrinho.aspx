@@ -16,7 +16,6 @@
             width: 117px;
         }
         .auto-style5 {
-            width: 137px;
         }
         .auto-style7 {
             height: 91px;
@@ -117,6 +116,7 @@
                 <td class="auto-style17">
                     <asp:Label ID="lblqntidade" runat="server" Text="Nova Quantidade:" Visible="False"></asp:Label>
                     <asp:TextBox ID="txtqtidade" runat="server" Visible="False" Width="29px"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtqtidade" Display="Dynamic" ErrorMessage="Tem de inserir um numero inteiro" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
                 </td>
                 <td class="auto-style15">
                     <asp:Button ID="btnconfirmar" runat="server" OnClick="btnconfirmar_Click" Text="Confirmar" Visible="False" Width="70px" />
@@ -128,9 +128,9 @@
                     <asp:Button ID="btnenc" runat="server" Text="Encomendar" Width="91px" Visible="False" />
                 </td>
                 <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style5">&nbsp;</td>
-                <td class="auto-style16">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style5" colspan="3">
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+                </td>
             </tr>
         </table>
     

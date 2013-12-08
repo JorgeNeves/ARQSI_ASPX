@@ -23,5 +23,14 @@ namespace TrabARQSI
            // ShippingAll.servicenamePortTypeClient proxy1 = new ShippingAll.servicenamePortTypeClient();
            // Label2.Text = "" + proxy1.custo(int.Parse(TextBox1.Text));
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            EnviaProdutosService.EnviaProdutosClient s = new EnviaProdutosService.EnviaProdutosClient();
+
+            s.enviaProdutos();
+        }
+
+
     }
 }

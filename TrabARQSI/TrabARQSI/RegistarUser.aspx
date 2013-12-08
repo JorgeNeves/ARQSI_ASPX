@@ -32,8 +32,7 @@
         }
         .auto-style8 {
             height: 23px;
-            width: 65px;
-        }
+            }
     </style>
 </head>
 <body>
@@ -52,6 +51,7 @@
                 <td class="auto-style1">Username:</td>
                 <td class="auto-style4">
                     <asp:TextBox ID="TextBox1" runat="server" Width="168px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Campo Necessário" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td>
                     <asp:Label ID="lblverificausername" runat="server" Text="Username Válido!"></asp:Label>
@@ -61,6 +61,7 @@
                 <td class="auto-style1">Email</td>
                 <td class="auto-style4">
                     <asp:TextBox ID="TextBox2" runat="server" Width="168px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" Display="Dynamic" ErrorMessage="Email inválido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -75,6 +76,7 @@
                 <td class="auto-style2">Confirmar Password:</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtpw2" runat="server" TextMode="Password" Width="168px"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtpw2" ControlToValidate="txtpw" Display="Dynamic" ErrorMessage="Password diferente" ForeColor="Red">*</asp:CompareValidator>
                 </td>
                 <td class="auto-style3"></td>
             </tr>
@@ -88,6 +90,11 @@
                     </td>
                     <td class="auto-style6">
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Width="98px" OnClick="btnCancelar_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style8" colspan="3">
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
                     </td>
                 </tr>
             </table>

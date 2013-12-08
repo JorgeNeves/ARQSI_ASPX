@@ -40,7 +40,9 @@
             <tr>
                 <td class="auto-style1">&nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Enviar produtos" />
+                </td>
             </tr>
         </table>
     

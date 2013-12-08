@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f566ca31-cb51-4a17-ace0-74041686a498" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3817/EnviaProdutos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnviaProdutos4.xsd" MetadataType="Schema" ID="1fe3eb51-82d1-4f9c-aa77-48770d25a4cf" SourceId="1" SourceUrl="http://localhost:3817/(S(umxr1oetqdtv222s3vrtgz0t))/EnviaProdutos.svc?xsd=xsd0" />
+    <MetadataFile FileName="EnviaProdutos1.wsdl" MetadataType="Wsdl" ID="5bcfe186-da05-40e8-b9a2-c253136ce73c" SourceId="1" SourceUrl="http://localhost:3817/(S(do2v4gxlveneouvsylitryyx))/EnviaProdutos.svc?wsdl" />
+    <MetadataFile FileName="EnviaProdutos1.disco" MetadataType="Disco" ID="56536ce4-b43c-42f0-a05f-19f3eb905519" SourceId="1" SourceUrl="http://localhost:3817/(S(opezz23xn3lfw3xhpnng2pod))/EnviaProdutos.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

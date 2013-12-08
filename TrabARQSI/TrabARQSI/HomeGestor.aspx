@@ -65,6 +65,11 @@
             height: 30px;
             text-align: left;
         }
+        .auto-style17 {
+            width: 97px;
+            text-align: left;
+        }
+        .auto-style18 {}
     </style>
 </head>
 <body>
@@ -107,7 +112,9 @@
                 <td class="auto-style13">
                     <asp:TextBox ID="txNome" runat="server" Width="169px"></asp:TextBox>
                 </td>
-                <td class="auto-style14"></td>
+                <td class="auto-style14">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txNome" Display="Dynamic" ErrorMessage="Nome produto necessário" ForeColor="Red">*</asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style14"></td>
             </tr>
             <tr>
@@ -116,6 +123,8 @@
                 <td class="auto-style15">Preço</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="txPreco" runat="server" Width="75px"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txPreco" Display="Dynamic" ErrorMessage="Insira um valor numerico" ForeColor="Red" Operator="DataTypeCheck" Type="Double">*</asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txPreco" Display="Dynamic" ErrorMessage="Preço necessário" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style10">
                     <asp:Button ID="btInserir" runat="server" OnClick="btInserir_Click" Text="Inserir" />
@@ -127,6 +136,8 @@
                 <td class="auto-style15">Quantidade</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="txQuantidade" runat="server" Width="77px"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txQuantidade" Display="Dynamic" ErrorMessage="Insira um numero inteiro" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">*</asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txQuantidade" Display="Dynamic" ErrorMessage="Quantidade necessária" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style10">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Alterar" />
@@ -134,21 +145,23 @@
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style15">Genero</td>
-                <td class="auto-style9">
+                <td class="auto-style5"></td>
+                <td class="auto-style17">Genero</td>
+                <td class="auto-style1">
                     <asp:TextBox ID="txGenero" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txGenero" Display="Dynamic" ErrorMessage="Genero necessário" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style10">
+                <td>
                     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Remover" />
                 </td>
-                <td class="auto-style10">&nbsp;</td>
+                <td></td>
             </tr>
             <tr>
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style15">Edicao</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="txEdicao" runat="server" Width="79px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txEdicao" ErrorMessage="Edição necessária" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style10">&nbsp;</td>
                 <td class="auto-style10">&nbsp;</td>
@@ -158,7 +171,9 @@
                     <br />
 &nbsp;<asp:Button ID="btlogout" runat="server" OnClick="btlogout_Click" Text="Logout" />
                 </td>
-                <td class="auto-style1" colspan="2">&nbsp;</td>
+                <td class="auto-style1" colspan="2">
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="auto-style18" ForeColor="Red" Width="272px" />
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
