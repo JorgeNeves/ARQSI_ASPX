@@ -15,6 +15,13 @@ namespace Table_Model.DAL
         {
 
         }
+        public int ncarrinhos(int iduser)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql = "Select Count(*) FROM Carrinho where idUser="+iduser+" and Atual=1";
+            DataSet ds = ExecuteQuery(cnx, sql);
+            return Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+        }
         public void atualizarquantidadeproduto(int iduser,int idcar,string nome,string edicao,int novaqtdd)
         {
             try
@@ -76,6 +83,13 @@ namespace Table_Model.DAL
             }
 
         }
+        public void novocarrinho(int iduser)
+        {
+            OleDbConnection cnx = GetConnection(true);
+            string sql = "Insert Into Carrinho(IdUser,Atual) Values("+iduser+",1)";
+            ExecuteNonQuery(cnx, sql);
+
+        }
         public void removerelementoCarrinho(int iduser, int idcar, string nome, string edicao)
         {
             try{
@@ -121,9 +135,6 @@ namespace Table_Model.DAL
         }
 
 
-        internal void addelementoCarrinho(int idUser, int idCar, string nome, string edicao, int quantidade)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

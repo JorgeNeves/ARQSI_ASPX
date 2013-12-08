@@ -32,13 +32,22 @@ namespace EnviarMAILS
             Table_Model.BLL.Carrinho car=new Table_Model.BLL.Carrinho();
             string nuser=Session["user"].ToString();
             int iduser = us.getidUser(nuser);
-            DataTable carrinhoatual = car.getElementosCarrinho(iduser);
-            if (carrinhoatual.Rows.Count==0){
-                lblVazio.Visible=true;
+            int ncarrinhos = car.ncarrinhos(iduser);
+            if (ncarrinhos == 0)
+            {
+                car.novocarrinho(iduser);
             }
-            GridViewCarrinho.DataSource =carrinhoatual;
-            GridViewCarrinho.DataBind();
-
+            DataTable carrinhoatual = car.getElementosCarrinho(iduser);
+            if (carrinhoatual.Rows.Count == 0)
+            {
+                lblVazio.Visible = true;
+                GridViewCarrinho.Visible = false;
+            }
+            else
+            {
+                GridViewCarrinho.DataSource = carrinhoatual;
+                GridViewCarrinho.DataBind();
+            }
 
         }
 

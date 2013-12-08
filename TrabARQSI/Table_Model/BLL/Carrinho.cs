@@ -14,6 +14,16 @@ namespace Table_Model.BLL
             DAL.CarrinhoGateway cg =new DAL.CarrinhoGateway();
             return cg.getElementos(idUser);
         }
+        public int ncarrinhos(int idUser)
+        {
+            DAL.CarrinhoGateway cg = new DAL.CarrinhoGateway();
+            return cg.ncarrinhos(idUser);
+        }
+        public void novocarrinho(int idUser)
+        {
+            DAL.CarrinhoGateway cg = new DAL.CarrinhoGateway();
+            cg.novocarrinho(idUser);
+        }
         public void eliminarelementosCarrinho(int idUser)
         {
             DAL.CarrinhoGateway cg = new DAL.CarrinhoGateway();
