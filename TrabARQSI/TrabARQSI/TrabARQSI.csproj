@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MenuEncomendas.aspx" />
     <Content Include="Portal-em-manutenção.jpg" />
     <Content Include="EnviaProdutos.svc" />
     <Content Include="Global.asax" />
@@ -161,6 +162,13 @@
     </Compile>
     <Compile Include="MenuCompras.aspx.designer.cs">
       <DependentUpon>MenuCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEncomendas.aspx.cs">
+      <DependentUpon>MenuEncomendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuEncomendas.aspx.designer.cs">
+      <DependentUpon>MenuEncomendas.aspx</DependentUpon>
     </Compile>
     <Compile Include="paginaErro.aspx.cs">
       <DependentUpon>paginaErro.aspx</DependentUpon>

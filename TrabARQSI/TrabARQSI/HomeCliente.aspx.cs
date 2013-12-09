@@ -52,6 +52,11 @@ namespace EnviarMAILS
         {
             Response.Redirect("MenuCompras.aspx", true);
         }
+
+        protected void btnencomendas_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuEncomendas.aspx", true);
+        }
         
 
         

@@ -50,5 +50,12 @@ namespace Table_Model.BLL
             DAL.CarrinhoGateway cg = new DAL.CarrinhoGateway();
             cg.addelementocarrinho(idUser, idCar, nome, edicao, quantidade);
         }
+
+        public void setfalse(int idcar)
+        {
+            DAL.CarrinhoGateway cg = new DAL.CarrinhoGateway();
+            cg.setfalse(idcar);
+
+        }
     }
 }

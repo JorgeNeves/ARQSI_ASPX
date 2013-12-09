@@ -149,6 +149,19 @@ namespace EnviarMAILS
                 lblpreco.Text = ShippingAll.custo(quantidade).ToString();
             }
         }
+
+        protected void btnenc_Click(object sender, EventArgs e)
+        {
+            Table_Model.BLL.User us = new Table_Model.BLL.User();
+            Table_Model.BLL.Carrinho car = new Table_Model.BLL.Carrinho();
+            string nuser = Session["user"].ToString();
+            int iduser = us.getidUser(nuser);
+            int idcar = car.getidcarrinho(iduser);
+            Table_Model.BLL.Encomenda enc = new Table_Model.BLL.Encomenda();
+            enc.add(iduser, idcar);
+            car.setfalse(idcar);
+            Page_Load(null, null);
+        }
         
     }
 }

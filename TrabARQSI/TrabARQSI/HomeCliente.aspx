@@ -23,7 +23,6 @@
             height: 177px;
         }
         .auto-style20 {
-            margin-bottom: 0px;
         }
         .auto-style22 {
             margin-left: 40px;
@@ -54,7 +53,7 @@
             <tr>
                 <td class="auto-style23">
                                 <asp:Button ID="btncarrinho" runat="server" style="margin-left: 24px" Text="Carrinho" Width="84px" OnClick="btncarrinho_Click" />
-                                <asp:Button ID="btnencomendas" runat="server" Text="Menu Encomendas" Width="135px" CssClass="auto-style20" />
+                                <asp:Button ID="btnencomendas" runat="server" Text="Menu Encomendas" Width="135px" CssClass="auto-style20" OnClick="btnencomendas_Click" />
                                 <asp:Button ID="btnComprar" runat="server" OnClick="btnComprar_Click" Text="MenuCompras" />
                                 <asp:Button ID="btnlogout" runat="server" style="margin-left: 18px" Text="Logout" Width="89px" OnClick="btnlogout_Click" />
                             </td>

@@ -135,7 +135,7 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Button ID="btnenc" runat="server" Text="Encomendar" Width="91px" Visible="False" />
+                    <asp:Button ID="btnenc" runat="server" Text="Encomendar" Width="91px" Visible="False" OnClick="btnenc_Click" />
                 </td>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5" colspan="3">

@@ -135,6 +135,13 @@ namespace Table_Model.DAL
         }
 
 
-        
+
+
+        public void setfalse(int idcar)
+        {
+            String sql = "Update Carrinho set Atual=0 where IdCarrinho=" + idcar;
+            OleDbConnection cnx = GetConnection(true);
+            ExecuteNonQuery(cnx, sql);
+        }
     }
 }
